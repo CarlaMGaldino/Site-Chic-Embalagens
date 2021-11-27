@@ -76,6 +76,9 @@ a.trabalhe {
 
 nav.menu-nav-header {
   width: 950px;
+  @include breakpoint(small-only) {
+    display: none;
+  }
   & ul {
     display: flex;
     justify-content: space-between;
@@ -93,4 +96,10 @@ nav.menu-nav-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .navegacao-menu__principal {
+    display: none;
+  }
 }

@@ -247,6 +247,11 @@ $black-seven: #343434;
   padding: 5px 0px 40px 20px;
 }
 
+button.slick-next.slick-arrow,
+button.slick-prev.slick-arrow {
+  display: none !important;
+}
+
 /*.banner-principal__img6-texto.col-6 {
   background-color: #fff;
   opacity: 0.9;
