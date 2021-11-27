@@ -1,0 +1,152 @@
+$primary-color: #c40f14;
+$secondary-color: #df191e;
+$tertiary-color: #b4b4b4;
+$fourth-color: #00000029;
+$black-one: #333333;
+$black-two: #151515;
+$black-three: #292929;
+$black-four: #1d1d1d;
+$black-five: #484848;
+$black-six: #363636;
+$black-seven: #343434;
+
+.footer-conteudo {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  height: 316px;
+  background: #fff;
+  align-items: center;
+}
+
+.footer-conteudo__imagem img {
+  max-width: 211px;
+  height: 129px;
+}
+
+p.footer-conteudo__paragrafo {
+  @include paragrafo_menu;
+  font-size: 15px;
+  text-align: left;
+  font-weight: normal;
+  text-transform: none;
+  margin-bottom: 10px;
+}
+
+p.footer-conteudo__span {
+  font-family: "Poppins" sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 45px;
+  text-align: left;
+  color: #df191e;
+  display: flex;
+  align-items: center;
+}
+
+p.footer-conteudo__span:after {
+  content: "";
+  background-image: url(/imagens/Icone-map.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 20.25px;
+  height: 15.75px;
+  margin-left: 10px;
+}
+
+.footer-conteudo__telefone {
+  display: flex;
+  flex-direction: column;
+  margin-top: -50px;
+}
+
+.footer-conteudo__telefone a {
+  font-family: "Poppins" sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 45px;
+  text-align: left;
+  color: #484848;
+}
+
+.footer-conteudo__coluna:after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 83px;
+  background: #df191e;
+  margin-top: -62px;
+}
+
+.footer-conteudo__sociais {
+  margin-top: -79px;
+}
+
+.footer-conteudo__final {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-conteudo__final p {
+  font-family: "Poppins" sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 45px;
+  text-align: left;
+  color: #484848;
+  opacity: 0.18;
+  margin-top: -50px;
+}
+
+/*media*/
+
+@media screen and (max-width: 768px) {
+  .footer-conteudo {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+  }
+
+  .footer-conteudo__coluna:after {
+    display: none;
+  }
+
+  .footer-conteudo__texto {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-conteudo__texto p {
+    text-align: center;
+  }
+
+  p.footer-conteudo__span {
+    align-self: center;
+  }
+
+  .footer-conteudo__final p {
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-conteudo__telefone {
+    margin-top: -181px;
+  }
+
+  .footer-conteudo__telefone a {
+    font-size: 20px;
+    line-height: 34px;
+  }
+
+  footer {
+    padding: 0px 10px;
+  }
+
+  .footer-conteudo__texto {
+    flex-direction: column;
+    margin-top: -60px;
+  }
+}

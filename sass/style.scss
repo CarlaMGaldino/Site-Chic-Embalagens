@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import "breakpoint";
+@import "normalize";
+@import "mixins";
+@import "footer";
+@import "header";
+@import "colunas";
+@import "banner-principal";
+@import "footer";
+@import "conteudo-home";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+$primary-color: #c40f14;
+$secondary-color: #df191e;
+$tertiary-color: #b4b4b4;
+$fourth-color: #00000029;
+$black-one: #333333;
+$black-two: #151515;
+$black-three: #292929;
+$black-four: #1d1d1d;
+$black-five: #000000ea;
+$black-six: #363636;
+
+.container {
+  max-width: 1340px;
+  margin: 0 auto;
+  @include breakpoint(super-large-up) {
+    max-width: 1500px;
+  }
+  @include breakpoint(large-only) {
+    max-width: 940px;
+  }
+  @include breakpoint(medium-only) {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}

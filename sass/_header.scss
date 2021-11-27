@@ -1,0 +1,96 @@
+@import "mixins";
+
+$primary-color: #c40f14;
+$secondary-color: #df191e;
+$tertiary-color: #b4b4b4;
+$fourth-color: #00000029;
+$black-one: #333333;
+$black-two: #151515;
+$black-three: #292929;
+$black-four: #1d1d1d;
+$black-five: #000000ea;
+$black-six: #363636;
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  height: 130px;
+  z-index: 999;
+}
+
+.row.navegacao-menu {
+  padding: 30px 0;
+  justify-content: space-between;
+}
+
+.logo-chic img {
+  width: 128px;
+  height: 78px;
+}
+
+.ancora-principal {
+  display: flex;
+  justify-content: flex-end;
+  @include paragrafo_menu;
+  font-size: 13px;
+  font-weight: bold;
+  color: $black-four;
+  margin-bottom: 20px;
+  & a {
+    margin-left: 30px;
+  }
+}
+
+a.trabalhe {
+  display: flex;
+}
+.ancora-principal .trabalhe:before {
+  content: "";
+  background-image: url(/imagens/icone-trabalhe-conosco.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 14px;
+  height: 17px;
+  margin-right: 7px;
+}
+.ancora-principal .contato {
+  display: flex;
+  align-items: center;
+}
+
+.ancora-principal .contato:before {
+  content: "";
+  background-image: url(/imagens/icone-contato.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 15px;
+  height: 12px;
+  margin-right: 7px;
+}
+
+nav.menu-nav-header {
+  width: 950px;
+  & ul {
+    display: flex;
+    justify-content: space-between;
+    & a {
+      @include paragrafo_menu;
+    }
+  }
+}
+
+nav.menu-nav-header {
+  width: 950px;
+}
+
+.navegacao-menu__principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

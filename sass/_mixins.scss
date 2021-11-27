@@ -1,0 +1,119 @@
+@import "breakpoint";
+
+$primary-color: #c40f14;
+$secondary-color: #df191e;
+$tertiary-color: #b4b4b4;
+$fourth-color: #00000029;
+$black-one: #333333;
+$black-two: #151515;
+$black-three: #292929;
+$black-four: #1d1d1d;
+$black-five: #000000ea;
+$black-six: #363636;
+$black-seven: #343434;
+
+@mixin title {
+  font-family: "Poppins" sans-serif;
+  font-weight: 300;
+  font-size: 44px;
+  line-height: 1em;
+  text-align: left;
+  text-transform: uppercase;
+  @include breakpoint(small-only) {
+    font-size: 20px;
+  }
+}
+
+@mixin title-red {
+  font-family: "Poppins" sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 1em;
+  text-align: left;
+  @include breakpoint(small-only) {
+    font-size: 30px;
+  }
+}
+
+@mixin sub-title {
+  font-family: "Poppins" sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1em;
+  text-align: center;
+  @include breakpoint(small-only) {
+    font-size: 16px;
+  }
+}
+
+@mixin paragrafo-span {
+  font-family: "Poppins" sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1em;
+  text-align: left;
+  @include breakpoint(small-only) {
+    font-size: 18px;
+  }
+}
+
+@mixin paragrafo-banner__principal {
+  font-family: "Poppins" sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 1.5em;
+  text-align: left;
+  color: $black-two;
+  @include breakpoint(small-only) {
+    font-size: 30px;
+  }
+}
+
+@mixin paragrafo-premio {
+  font-family: "Poppins" sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.5em;
+  text-align: left;
+  color: $black-two;
+  @include breakpoint(small-only) {
+    font-size: 30px;
+  }
+}
+
+@mixin paragrafo-texto {
+  font-family: "Poppins" sans-serif;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 35px;
+  text-align: left;
+  @include breakpoint(super-large) {
+    font-size: 16px;
+  }
+}
+
+@mixin paragrafo_menu {
+  font-family: "Poppins" sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5em;
+  text-align: center;
+  color: #484848;
+  text-transform: uppercase;
+  @include breakpoint(small-only) {
+    font-size: 16px;
+  }
+}
+
+@mixin button-page {
+  font-family: "Poppins" sans-serif;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 1.5em;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  @include breakpoint(small-only) {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,392 @@
+@import "mixins";
+
+$primary-color: #c40f14;
+$secondary-color: #df191e;
+$tertiary-color: #b4b4b4;
+$fourth-color: #00000029;
+$black-one: #333333;
+$black-two: #151515;
+$black-three: #292929;
+$black-four: #1d1d1d;
+$black-five: #484848;
+$black-six: #363636;
+$black-seven: #343434;
+
+section.sobre-empresa__principal {
+  padding: 100px 0px;
+}
+
+.sobre-empresa__foto figure img {
+  max-width: 100%;
+}
+
+.sobre-empresa__foto figure {
+  width: 748.46px;
+  height: 493.79px;
+  z-index: 10;
+  position: relative;
+  top: 46px;
+  padding: 0px 20px 0px 0px;
+}
+
+.estilo-span-2 {
+  @include sub-title;
+  color: $primary-color;
+  text-transform: uppercase;
+}
+
+.sobre-empresa__texto h3 {
+  @include title;
+  color: $black-two;
+}
+
+span.estilo-fonte {
+  color: $secondary-color;
+}
+
+.sobre-empresa__texto a {
+  @include button-page;
+  background-color: $primary-color;
+  padding: 5px 10px;
+}
+
+.sobre-empresa__texto a:hover {
+  @include button-page;
+  background-color: $black-two;
+  padding: 5px 10px;
+}
+
+.sobre-empresa {
+  display: flex;
+}
+
+.sobre-empresa__texto {
+  padding: 50px 10px;
+}
+
+.sobre-empresa__texto h3 {
+  margin: 10px 0px 34px 0px;
+}
+
+.sobre-empresa__texto p {
+  margin-bottom: 30px;
+  @include paragrafo-texto;
+}
+
+.sobre-empresa {
+  position: relative;
+  z-index: 5;
+}
+
+.sobre-empresa:after {
+  content: "";
+  position: absolute;
+  width: 1119px;
+  height: 689px;
+  background: transparent;
+  border: 1px solid #a7a7a7;
+  left: 409px;
+  top: -38px;
+}
+
+/*embalagens*/
+
+section.embalagens-home {
+  padding: 100px 0px 300px 0px;
+}
+
+.embalagens-home__embalagens {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.embalagens-home__embalagens-conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.embalagens-home__embalagens-bobinas {
+  background-image: url(/imagens/images/fundo-embalagem-industrial-min.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  width: 40%;
+  height: 549.96px;
+  position: relative;
+}
+
+.embalagens-home__embalagens-presentes {
+  background-image: url(/imagens/images/fundo-embalagem-presente-min.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  width: 40%;
+  height: 549.96px;
+  position: relative;
+}
+
+.embalagens-home__embalagens-bobinas span,
+.embalagens-home__embalagens-presentes span {
+  @include sub-title;
+  text-align: center;
+  color: #fff;
+  margin: 48px 20px 15px 0px;
+}
+
+.embalagens-home__embalagens-conteudo p {
+  @include title;
+  text-align: center;
+  color: #fff;
+}
+
+.embalagens-home__embalagens-bobinas p:after {
+  position: absolute;
+  content: "";
+  background-image: url(/imagens/images/bobinas-min.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 533px;
+  height: 423px;
+  z-index: 999;
+  top: 237px;
+}
+
+.embalagens-home__embalagens-presentes p:after {
+  content: "";
+  background-image: url(/imagens/images/saquinho-presente-min.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  max-width: 604px;
+  height: 408.35px;
+  z-index: 999;
+  top: 233px;
+}
+
+.embalagens-home__embalagens-presentes:after {
+  content: "";
+  width: 375px;
+  height: 308px;
+  background: transparent;
+  border: 3px solid #b2b2b2;
+  position: absolute;
+  left: 314px;
+  top: -79px;
+}
+
+/*Embalagens fim*/
+
+/*Empresa*/
+
+section.Empresa {
+  background-image: url(/imagens/banner-missao-valores-min.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  padding: 90px 0px;
+}
+
+.empresa-dizeres {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.empresa-dizeres__missao,
+.empresa-dizeres__visao,
+.empresa-dizeres__valores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 28%;
+  @include paragrafo-texto;
+  text-align: center;
+  color: $black-two;
+}
+
+.empresa-dizeres__missao h3,
+.empresa-dizeres__visao h3,
+.empresa-dizeres__valores h3 {
+  @include title;
+  color: $black-two;
+  margin: 10px 0px;
+}
+
+.empresa-dizeres__missao span,
+.empresa-dizeres__visao span,
+.empresa-dizeres__valores span {
+  @include paragrafo-span;
+  color: $black-two;
+  margin: 10px 0px;
+}
+
+.empresa-dizeres__missao img {
+  width: 133.8px;
+  height: 126.48px;
+}
+
+.empresa-dizeres__visao img {
+  width: 116.07px;
+  height: 116.07px;
+}
+
+.empresa-dizeres__valores img {
+  width: 107.9px;
+  height: 109.52px;
+}
+
+/*Final Empresa*/
+
+/*qualidade*/
+
+section.Qualidade {
+  background-image: url(/imagens/banner-footer-min.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  padding: 90px 0px;
+}
+
+.empresa-qualidade__conteudo {
+  max-width: 1175px;
+  height: 510px;
+  background: #292929;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 62px;
+}
+
+.empresa-qualidade__conteudo span {
+  @include sub-title;
+  text-align: left;
+  text-transform: uppercase;
+  color: $primary-color;
+  margin-bottom: 7px;
+}
+
+.empresa-qualidade__conteudo h3 {
+  @include title;
+  color: #fff;
+}
+
+.empresa-qualidade__conteudo p {
+  @include paragrafo-texto;
+  color: #fff;
+  font-weight: normal;
+  margin-top: 30px;
+}
+
+.empresa-qualidade__conteudo a {
+  @include button-page;
+  background-color: $primary-color;
+  max-width: 482px;
+  margin-top: 30px;
+}
+
+/*media*/
+
+@media screen and (max-width: 768px) {
+  .empresa-dizeres {
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .empresa-dizeres__missao,
+  .empresa-dizeres__visao,
+  .empresa-dizeres__valores {
+    width: 100%;
+    padding: 20px;
+  }
+
+  section.Empresa {
+    max-width: 100%;
+    padding: 20px 0px;
+  }
+
+  .empresa-qualidade__conteudo {
+    padding: 0px 10px;
+  }
+
+  .empresa-qualidade__conteudo p {
+    font-size: 14px;
+  }
+
+  .empresa-qualidade__conteudo {
+    height: 100vh;
+    padding: 50px 10px;
+  }
+  section.Qualidade {
+    padding: 42px 0px;
+  }
+  .embalagens-home__embalagens {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .embalagens-home__embalagens-presentes:after {
+    display: none;
+  }
+  .embalagens-home__embalagens-presentes {
+    max-width: 100%;
+    width: 100%;
+    height: 346.96px;
+  }
+
+  .embalagens-home__embalagens-presentes p:after {
+    max-width: 604px;
+  }
+  .embalagens-home__embalagens-bobinas span,
+  .embalagens-home__embalagens-presentes span {
+    margin: 20px 10px 0px 10px;
+  }
+
+  .embalagens-home__embalagens-bobinas {
+    max-width: 100%;
+    width: 100%;
+    height: 346.96px;
+    margin-bottom: 70px;
+  }
+  .embalagens-home__embalagens-bobinas p:after {
+    display: block;
+    width: 286px;
+    height: 300px;
+    z-index: 999;
+    top: 128px;
+  }
+
+  .embalagens-home__embalagens-bobinas span,
+  .embalagens-home__embalagens-presentes span {
+    margin: 37px 10px 14px 10px;
+  }
+  section.embalagens-home {
+    padding: 20px 0px 70px 0px;
+  }
+
+  .sobre-empresa {
+    flex-direction: column;
+  }
+
+  .sobre-empresa__texto {
+    padding: 79px 10px 10px 10px;
+  }
+
+  section.sobre-empresa__principal {
+    padding: 35px 0px;
+  }
+  .sobre-empresa__foto figure img {
+    max-width: 100%;
+  }
+}
