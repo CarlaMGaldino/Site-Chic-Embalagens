@@ -458,6 +458,12 @@ nav.menu-nav-header {
   width: 950px;
 }
 
+@media (max-width: 37.4375em) {
+  nav.menu-nav-header {
+    display: none;
+  }
+}
+
 nav.menu-nav-header ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -498,6 +504,12 @@ nav.menu-nav-header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .navegacao-menu__principal {
+    display: none;
+  }
 }
 
 .row {
@@ -1057,6 +1069,11 @@ nav.menu-nav-header {
   }
 }
 
+button.slick-next.slick-arrow,
+button.slick-prev.slick-arrow {
+  display: none !important;
+}
+
 /*.banner-principal__img6-texto.col-6 {
   background-color: #fff;
   opacity: 0.9;
@@ -1251,7 +1268,7 @@ section.sobre-empresa__principal {
 }
 
 .sobre-empresa__foto figure {
-  width: 748.46px;
+  max-width: 748.46px;
   height: 493.79px;
   z-index: 10;
   position: relative;
@@ -1356,7 +1373,7 @@ span.estilo-fonte {
 
 @media (max-width: 99em) {
   .sobre-empresa__texto p {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -1374,11 +1391,13 @@ span.estilo-fonte {
   border: 1px solid #a7a7a7;
   left: 409px;
   top: -38px;
+  z-index: -1;
 }
 
 /*embalagens*/
 section.embalagens-home {
   padding: 100px 0px 300px 0px;
+  overflow: hidden;
 }
 
 .embalagens-home__embalagens {
@@ -1498,8 +1517,9 @@ section.embalagens-home {
   background: transparent;
   border: 3px solid #b2b2b2;
   position: absolute;
-  left: 314px;
-  top: -79px;
+  right: -282px;
+  top: -100px;
+  z-index: -1;
 }
 
 /*Embalagens fim*/
@@ -1551,7 +1571,7 @@ section.Empresa {
   .empresa-dizeres__missao,
   .empresa-dizeres__visao,
   .empresa-dizeres__valores {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -1687,7 +1707,7 @@ section.Qualidade {
 
 @media (max-width: 99em) {
   .empresa-qualidade__conteudo p {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -1794,14 +1814,20 @@ section.Qualidade {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .sobre-empresa__texto {
-    padding: 79px 10px 10px 10px;
-  }
   section.sobre-empresa__principal {
-    padding: 35px 0px;
+    padding: 56px 0px;
   }
   .sobre-empresa__foto figure img {
+    margin-top: 10px;
+    margin-bottom: -288px;
     max-width: 100%;
+  }
+  .sobre-empresa__foto figure {
+    padding: 0px;
+    margin-bottom: -167px;
+  }
+  .sobre-empresa:after {
+    display: none;
   }
 }
 
