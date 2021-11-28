@@ -1,4 +1,5 @@
 @import "mixins";
+@import "breakpoint";
 
 $primary-color: #c40f14;
 $secondary-color: #df191e;
@@ -11,17 +12,19 @@ $black-four: #1d1d1d;
 $black-five: #000000ea;
 $black-six: #363636;
 
-header {
-  position: fixed;
+.header-navegacao__menu {
+  position: relative;
   top: 0;
   width: 100%;
   background: #fff;
-  height: 130px;
   z-index: 999;
+  @include breakpoint(medium-only) {
+    display: none;
+  }
 }
 
 .row.navegacao-menu {
-  padding: 30px 0;
+  padding: 14px 0;
   justify-content: space-between;
 }
 
@@ -41,6 +44,52 @@ header {
   & a {
     margin-left: 30px;
   }
+}
+
+.menu-scroll__navegacao--menu-principal .ancora-principal .trabalhe,
+.menu-scroll__navegacao--menu-principal .ancora-principal .contato {
+  color: #fff;
+  @include breakpoint(medium-only) {
+    display: none;
+  }
+}
+
+.menu-scroll__li.li-trabalhe,
+.menu-scroll__li.li-contato {
+  color: #fff;
+  display: none;
+  @include breakpoint(medium-only) {
+    display: block;
+  }
+}
+
+.menu-scroll__li .trabalhe:before {
+  content: "";
+  background-image: url(/imagens/icone-trabalhe-conosco.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 14px;
+  height: 17px;
+  margin-right: 7px;
+}
+
+.menu-scroll__li .contato {
+  display: flex;
+  align-items: center;
+}
+
+.menu-scroll__li .contato:before {
+  content: "";
+  background-image: url(/imagens/icone-contato.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 15px;
+  height: 12px;
+  margin-right: 7px;
 }
 
 a.trabalhe {
@@ -75,8 +124,8 @@ a.trabalhe {
 }
 
 nav.menu-nav-header {
-  width: 950px;
-  @include breakpoint(small-only) {
+  width: 100%;
+  @include breakpoint(medium-only) {
     display: none;
   }
   & ul {
@@ -84,6 +133,11 @@ nav.menu-nav-header {
     justify-content: space-between;
     & a {
       @include paragrafo_menu;
+      &:hover {
+        color: $primary-color;
+        text-decoration: underline;
+        transition: 0.3s;
+      }
     }
   }
 }
@@ -102,4 +156,126 @@ nav.menu-nav-header {
   .navegacao-menu__principal {
     display: none;
   }
+}
+
+.menu-mobile__scroll {
+  background-color: #fff;
+  width: 25px;
+  height: 2px;
+  margin-right: 0px;
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    bottom: 6px;
+  }
+  &::before {
+    content: "";
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    top: 6px;
+  }
+  &.menu-ativo {
+    transform: rotate(135deg);
+    bottom: 0;
+    transition: 0.3s;
+  }
+  &.menu-ativo::after {
+    display: none;
+  }
+  &.menu-ativo::before {
+    transform: rotate(-90deg);
+    top: 0;
+    transition: 0.3s;
+  }
+}
+
+.menu-scroll {
+  background-color: $black-two;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 998;
+
+  &__conteudo {
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__nav {
+    @include breakpoint(medium-only) {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-400px);
+      background-color: $black-two;
+      position: absolute;
+      padding: 20px;
+      top: 64px;
+      left: 0;
+      width: 290px;
+      transition: 0.25s ease;
+      &.menu-ativo {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+        left: 0;
+      }
+    }
+  }
+  &__ul {
+    display: flex;
+    flex-flow: row wrap;
+    @include breakpoint(medium-only) {
+      flex-flow: column;
+    }
+  }
+  &__li {
+    margin-left: 20px;
+    @include breakpoint(medium-only) {
+      margin-bottom: 20px;
+    }
+    & a {
+      @include paragrafo_menu;
+      color: #fff;
+      &:hover {
+        color: $primary-color;
+        text-decoration: underline;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+a#menu-mobile__toggle {
+  padding: 20px;
+  display: none;
+  @include breakpoint(medium-only) {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1000px) {
+  .menu-scroll__li a {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 1076px) {
+  .navegacao-menu__principal {
+    width: 100%;
+  }
+  nav.menu-nav-header {
+    width: 100%;
+  }
+}
+
+section.sobre-empresa__principal {
+  overflow: hidden;
 }
