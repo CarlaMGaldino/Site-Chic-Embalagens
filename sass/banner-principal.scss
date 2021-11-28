@@ -25,8 +25,7 @@ $black-seven: #343434;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
-  margin-top: 107px;
+  height: calc(100vh - 107px);
 }
 
 .banner-principal__img1 h2 {
@@ -54,8 +53,7 @@ $black-seven: #343434;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
-  margin-top: 107px;
+  height: calc(100vh - 107px);
 }
 
 .banner-principal__img2-texto.col-6 {
@@ -92,8 +90,7 @@ $black-seven: #343434;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
-  margin-top: 107px;
+  height: calc(100vh - 107px);
 }
 
 .banner-principal__img3-texto.col-6 {
@@ -130,8 +127,7 @@ $black-seven: #343434;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
-  margin-top: 107px;
+  height: calc(100vh - 107px);
 }
 
 .banner-principal__img4-texto.col-6 {
@@ -168,8 +164,7 @@ $black-seven: #343434;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
-  margin-top: 107px;
+  height: calc(100vh - 107px);
 }
 
 .banner-principal__img5-texto.col-6 {
@@ -211,8 +206,7 @@ $black-seven: #343434;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
-  margin-top: 107px;
+  height: calc(100vh - 107px);
 }
 
 .banner-principal__img6-texto.col-6 {
@@ -251,10 +245,3 @@ button.slick-next.slick-arrow,
 button.slick-prev.slick-arrow {
   display: none !important;
 }
-
-/*.banner-principal__img6-texto.col-6 {
-  background-color: #fff;
-  opacity: 0.9;
-  width: 1213px;
-  height: 348px;
-}*/

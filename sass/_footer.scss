@@ -20,8 +20,7 @@ $black-seven: #343434;
 }
 
 .footer-conteudo__imagem img {
-  max-width: 211px;
-  height: 129px;
+  max-width: 200px;
 }
 
 p.footer-conteudo__paragrafo {
@@ -106,8 +105,7 @@ p.footer-conteudo__span:after {
   .footer-conteudo {
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    height: 100vh;
+    height: auto;
   }
 
   .footer-conteudo__coluna:after {
@@ -132,21 +130,38 @@ p.footer-conteudo__span:after {
     align-items: center;
   }
 
-  .footer-conteudo__telefone {
-    margin-top: -181px;
-  }
-
   .footer-conteudo__telefone a {
     font-size: 20px;
     line-height: 34px;
   }
 
   footer {
-    padding: 0px 10px;
+    padding: 0px;
   }
 
   .footer-conteudo__texto {
     flex-direction: column;
-    margin-top: -60px;
+    margin-bottom: 64px;
+  }
+
+  .footer-conteudo__imagem img {
+    max-width: 150px;
+  }
+
+  .footer-conteudo__imagem {
+    margin: 30px 0px;
+  }
+
+  .footer-conteudo__telefone {
+    margin-bottom: 107px;
+  }
+  .footer-conteudo__sociais {
+    margin-bottom: 63px;
+  }
+  .empresa-dizeres__missao,
+  .empresa-dizeres__visao,
+  .empresa-dizeres__valores {
+    width: 100%;
+    margin: 30px 0px;
   }
 }

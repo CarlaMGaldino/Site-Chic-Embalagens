@@ -1,0 +1,65 @@
+@import "mixins";
+
+$primary-color: #c40f14;
+$secondary-color: #df191e;
+$tertiary-color: #b4b4b4;
+$fourth-color: #00000029;
+$black-one: #333333;
+$black-two: #151515;
+$black-three: #292929;
+$black-four: #1d1d1d;
+$black-five: #484848;
+$black-six: #363636;
+$black-seven: #343434;
+
+section.page-empresa {
+  padding: 180px 0px 100px;
+}
+.page-empresa-conteudo-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 200px;
+  width: 100%;
+}
+
+.page-empresa-img img {
+  width: 700px;
+}
+
+.page-empresa-img {
+  max-width: 45%;
+}
+
+.page-empresa-img2 {
+  width: 45%;
+}
+.page-empresa-img2 img {
+  width: 700px;
+}
+
+.page-empresa-conteudo2 {
+  width: 45%;
+}
+
+.page-empresa-conteudo-box h3 {
+  @include title;
+  color: $black-two;
+  margin: 15px 0px 25px;
+}
+
+.page-empresa-conteudo-box p {
+  @include paragrafo-texto;
+  color: #333;
+}
+
+.page-empresa-img img:before {
+  content: "";
+  width: 663px;
+  height: 476px;
+  background: transparent;
+  border: 3px solid #c6121d;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+}
