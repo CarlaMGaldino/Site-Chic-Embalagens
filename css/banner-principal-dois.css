@@ -1,0 +1,64 @@
+.banner-principal__empresa {
+  background-image: url(/imagens/fundo-paralax-chic-embalgaens-2-min.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: calc(100vh - 107px);
+  background-attachment: fixed;
+  background-color: #ffffffb8;
+  background-blend-mode: color;
+  height: 492px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner-principal__empresa-img-texto h2 {
+  font-family: "Poppins" sans-serif;
+  font-weight: 300;
+  font-size: 44px;
+  line-height: 1em;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+@media (max-width: 48em) {
+  .banner-principal__empresa-img-texto h2 {
+    font-size: 20px;
+  }
+}
+
+.banner-principal__empresa-img-texto h2:before {
+  content: "";
+  background-image: url(/imagens/seta.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 62.25px;
+  height: 113.75px;
+  margin-top: 9px;
+}
+
+.banner-principal__empresa-img-texto h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=banner-principal-dois.css.map */

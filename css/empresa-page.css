@@ -1,0 +1,79 @@
+section.page-empresa {
+  padding: 180px 0px 100px;
+}
+
+.page-empresa-conteudo-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 200px;
+  width: 100%;
+}
+
+.page-empresa-img img {
+  width: 700px;
+}
+
+.page-empresa-img {
+  max-width: 45%;
+}
+
+.page-empresa-img2 {
+  width: 45%;
+}
+
+.page-empresa-img2 img {
+  width: 700px;
+}
+
+.page-empresa-conteudo2 {
+  width: 45%;
+}
+
+.page-empresa-conteudo-box h3 {
+  font-family: "Poppins" sans-serif;
+  font-weight: 300;
+  font-size: 44px;
+  line-height: 1em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #151515;
+  margin: 15px 0px 25px;
+}
+
+@media (max-width: 48em) {
+  .page-empresa-conteudo-box h3 {
+    font-size: 20px;
+  }
+}
+
+.page-empresa-conteudo-box p {
+  font-family: "Poppins" sans-serif;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 35px;
+  text-align: left;
+  color: #333;
+}
+
+@media (max-width: 37em) {
+  .page-empresa-conteudo-box p {
+    font-size: 14px;
+  }
+}
+
+.page-empresa-img img:before {
+  content: "";
+  width: 663px;
+  height: 476px;
+  background: transparent;
+  border: 3px solid #c6121d;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+}
+/*# sourceMappingURL=empresa-page.css.map */

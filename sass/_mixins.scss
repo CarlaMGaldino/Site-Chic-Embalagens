@@ -87,7 +87,8 @@ $black-seven: #343434;
   font-size: 19px;
   line-height: 35px;
   text-align: left;
-  @include breakpoint(super-large) {
+
+  @include breakpoint(super-small-only) {
     font-size: 14px;
   }
 }

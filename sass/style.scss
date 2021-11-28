@@ -9,6 +9,8 @@
 @import "banner-principal";
 @import "footer";
 @import "conteudo-home";
+@import "empresa-page";
+@import "banner-principal-dois";
 
 html {
   scroll-behavior: smooth;
@@ -40,10 +42,10 @@ $black-six: #363636;
     max-width: 1500px;
   }
   @include breakpoint(large-only) {
-    max-width: 940px;
+    max-width: 1200px;
   }
   @include breakpoint(medium-only) {
     max-width: 100%;
-    padding: 0 10px;
+    padding: 0px 10px !important;
   }
 }
