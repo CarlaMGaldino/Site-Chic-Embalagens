@@ -219,7 +219,7 @@ p.footer-conteudo__paragrafo {
   margin-bottom: 10px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   p.footer-conteudo__paragrafo {
     font-size: 16px;
   }
@@ -364,17 +364,22 @@ p.footer-conteudo__span:after {
   }
 }
 
-header {
-  position: fixed;
+.header-navegacao__menu {
+  position: relative;
   top: 0;
   width: 100%;
   background: #fff;
-  height: 130px;
   z-index: 999;
 }
 
+@media (max-width: 56.1875em) {
+  .header-navegacao__menu {
+    display: none;
+  }
+}
+
 .row.navegacao-menu {
-  padding: 30px 0;
+  padding: 14px 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -405,7 +410,7 @@ header {
   margin-bottom: 20px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .ancora-principal {
     font-size: 16px;
   }
@@ -413,6 +418,64 @@ header {
 
 .ancora-principal a {
   margin-left: 30px;
+}
+
+.menu-scroll__navegacao--menu-principal .ancora-principal .trabalhe,
+.menu-scroll__navegacao--menu-principal .ancora-principal .contato {
+  color: #fff;
+}
+
+@media (max-width: 56.1875em) {
+  .menu-scroll__navegacao--menu-principal .ancora-principal .trabalhe,
+  .menu-scroll__navegacao--menu-principal .ancora-principal .contato {
+    display: none;
+  }
+}
+
+.menu-scroll__li.li-trabalhe,
+.menu-scroll__li.li-contato {
+  color: #fff;
+  display: none;
+}
+
+@media (max-width: 56.1875em) {
+  .menu-scroll__li.li-trabalhe,
+  .menu-scroll__li.li-contato {
+    display: block;
+  }
+}
+
+.menu-scroll__li .trabalhe:before {
+  content: "";
+  background-image: url(/imagens/icone-trabalhe-conosco.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 14px;
+  height: 17px;
+  margin-right: 7px;
+}
+
+.menu-scroll__li .contato {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-scroll__li .contato:before {
+  content: "";
+  background-image: url(/imagens/icone-contato.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 15px;
+  height: 12px;
+  margin-right: 7px;
 }
 
 a.trabalhe {
@@ -455,10 +518,10 @@ a.trabalhe {
 }
 
 nav.menu-nav-header {
-  width: 950px;
+  width: 100%;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 56.1875em) {
   nav.menu-nav-header {
     display: none;
   }
@@ -483,10 +546,17 @@ nav.menu-nav-header ul a {
   text-transform: uppercase;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   nav.menu-nav-header ul a {
     font-size: 16px;
   }
+}
+
+nav.menu-nav-header ul a:hover {
+  color: #c40f14;
+  text-decoration: underline;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 nav.menu-nav-header {
@@ -510,6 +580,179 @@ nav.menu-nav-header {
   .navegacao-menu__principal {
     display: none;
   }
+}
+
+.menu-mobile__scroll {
+  background-color: #fff;
+  width: 25px;
+  height: 2px;
+  margin-right: 0px;
+  position: relative;
+}
+
+.menu-mobile__scroll::after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  bottom: 6px;
+}
+
+.menu-mobile__scroll::before {
+  content: "";
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  top: 6px;
+}
+
+.menu-mobile__scroll.menu-ativo {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  bottom: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.menu-mobile__scroll.menu-ativo::after {
+  display: none;
+}
+
+.menu-mobile__scroll.menu-ativo::before {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  top: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.menu-scroll {
+  background-color: #151515;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 998;
+}
+
+.menu-scroll__conteudo {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 56.1875em) {
+  .menu-scroll__nav {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-400px);
+            transform: translateY(-400px);
+    background-color: #151515;
+    position: absolute;
+    padding: 20px;
+    top: 64px;
+    left: 0;
+    width: 290px;
+    -webkit-transition: 0.25s ease;
+    transition: 0.25s ease;
+  }
+  .menu-scroll__nav.menu-ativo {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    left: 0;
+  }
+}
+
+.menu-scroll__ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+@media (max-width: 56.1875em) {
+  .menu-scroll__ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+}
+
+.menu-scroll__li {
+  margin-left: 20px;
+}
+
+@media (max-width: 56.1875em) {
+  .menu-scroll__li {
+    margin-bottom: 20px;
+  }
+}
+
+.menu-scroll__li a {
+  font-family: "Poppins" sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5em;
+  text-align: center;
+  color: #484848;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@media (max-width: 48em) {
+  .menu-scroll__li a {
+    font-size: 16px;
+  }
+}
+
+.menu-scroll__li a:hover {
+  color: #c40f14;
+  text-decoration: underline;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+a#menu-mobile__toggle {
+  padding: 20px;
+  display: none;
+}
+
+@media (max-width: 56.1875em) {
+  a#menu-mobile__toggle {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1000px) {
+  .menu-scroll__li a {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 1076px) {
+  .navegacao-menu__principal {
+    width: 100%;
+  }
+  nav.menu-nav-header {
+    width: 100%;
+  }
+}
+
+section.sobre-empresa__principal {
+  overflow: hidden;
 }
 
 .row {
@@ -616,7 +859,7 @@ nav.menu-nav-header {
   margin-top: 132px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .banner-principal__img1 h2 {
     font-size: 30px;
   }
@@ -636,7 +879,7 @@ nav.menu-nav-header {
   margin-top: 36px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .banner-principal__img1 a {
     font-size: 14px;
   }
@@ -653,7 +896,7 @@ nav.menu-nav-header {
   text-transform: uppercase;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .banner-principal__img1 a:hover {
     font-size: 14px;
   }
@@ -694,7 +937,7 @@ nav.menu-nav-header {
   margin-top: 290px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .banner-principal__img2 h2 {
     font-size: 30px;
   }
@@ -714,7 +957,7 @@ nav.menu-nav-header {
   margin-top: 36px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .banner-principal__img2 a {
     font-size: 14px;
   }
@@ -733,7 +976,7 @@ nav.menu-nav-header {
   margin-top: 36px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .banner-principal__img2 a:hover {
     font-size: 14px;
   }
@@ -774,7 +1017,7 @@ nav.menu-nav-header {
   margin-top: 159px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .banner-principal__img3 h2 {
     font-size: 30px;
   }
@@ -794,7 +1037,7 @@ nav.menu-nav-header {
   margin-top: 36px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .banner-principal__img3 a {
     font-size: 14px;
   }
@@ -813,7 +1056,7 @@ nav.menu-nav-header {
   margin-top: 36px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .banner-principal__img3 a:hover {
     font-size: 14px;
   }
@@ -854,7 +1097,7 @@ nav.menu-nav-header {
   margin-top: 211px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .banner-principal__img4 h2 {
     font-size: 30px;
   }
@@ -874,7 +1117,7 @@ nav.menu-nav-header {
   margin-top: 36px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .banner-principal__img4 a {
     font-size: 14px;
   }
@@ -893,7 +1136,7 @@ nav.menu-nav-header {
   margin-top: 36px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .banner-principal__img4 a:hover {
     font-size: 14px;
   }
@@ -944,7 +1187,7 @@ nav.menu-nav-header {
   padding: 40px 25px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .banner-principal__img5 h2 {
     font-size: 30px;
   }
@@ -964,7 +1207,7 @@ nav.menu-nav-header {
   margin-top: 36px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .banner-principal__img5 a {
     font-size: 14px;
   }
@@ -983,7 +1226,7 @@ nav.menu-nav-header {
   margin-top: 36px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .banner-principal__img5 a:hover {
     font-size: 14px;
   }
@@ -1026,7 +1269,7 @@ nav.menu-nav-header {
   margin-top: 141px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .banner-principal__img6 h2 {
     font-size: 30px;
   }
@@ -1045,7 +1288,7 @@ nav.menu-nav-header {
   padding: 0px 0px 0 20px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .banner-principal__img6 p {
     font-size: 30px;
   }
@@ -1063,7 +1306,7 @@ nav.menu-nav-header {
   padding: 5px 0px 40px 20px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .banner-principal__img6 span {
     font-size: 18px;
   }
@@ -1114,7 +1357,7 @@ p.footer-conteudo__paragrafo {
   margin-bottom: 10px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   p.footer-conteudo__paragrafo {
     font-size: 16px;
   }
@@ -1286,7 +1529,7 @@ section.sobre-empresa__principal {
   text-transform: uppercase;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .estilo-span-2 {
     font-size: 16px;
   }
@@ -1302,7 +1545,7 @@ section.sobre-empresa__principal {
   color: #151515;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .sobre-empresa__texto h3 {
     font-size: 20px;
   }
@@ -1324,7 +1567,7 @@ span.estilo-fonte {
   padding: 5px 10px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .sobre-empresa__texto a {
     font-size: 14px;
   }
@@ -1342,7 +1585,7 @@ span.estilo-fonte {
   padding: 5px 10px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .sobre-empresa__texto a:hover {
     font-size: 14px;
   }
@@ -1459,7 +1702,7 @@ section.embalagens-home {
   margin: 48px 20px 15px 0px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .embalagens-home__embalagens-bobinas span,
   .embalagens-home__embalagens-presentes span {
     font-size: 16px;
@@ -1477,7 +1720,7 @@ section.embalagens-home {
   color: #fff;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .embalagens-home__embalagens-conteudo p {
     font-size: 20px;
   }
@@ -1588,7 +1831,7 @@ section.Empresa {
   margin: 10px 0px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .empresa-dizeres__missao h3,
   .empresa-dizeres__visao h3,
   .empresa-dizeres__valores h3 {
@@ -1608,7 +1851,7 @@ section.Empresa {
   margin: 10px 0px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .empresa-dizeres__missao span,
   .empresa-dizeres__visao span,
   .empresa-dizeres__valores span {
@@ -1672,7 +1915,7 @@ section.Qualidade {
   margin-bottom: 7px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .empresa-qualidade__conteudo span {
     font-size: 16px;
   }
@@ -1688,7 +1931,7 @@ section.Qualidade {
   color: #fff;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .empresa-qualidade__conteudo h3 {
     font-size: 20px;
   }
@@ -1724,7 +1967,7 @@ section.Qualidade {
   margin-top: 30px;
 }
 
-@media (max-width: 37.4375em) {
+@media (max-width: 48em) {
   .empresa-qualidade__conteudo a {
     font-size: 14px;
   }
@@ -1856,7 +2099,7 @@ a {
 
 @media (max-width: 74.9375em) {
   .container {
-    max-width: 940px;
+    max-width: 1200px;
   }
 }
 

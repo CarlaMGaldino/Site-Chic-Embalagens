@@ -40,7 +40,7 @@ $black-six: #363636;
     max-width: 1500px;
   }
   @include breakpoint(large-only) {
-    max-width: 940px;
+    max-width: 1200px;
   }
   @include breakpoint(medium-only) {
     max-width: 100%;
