@@ -1,4 +1,5 @@
 @import "mixins";
+@import "breakpoint";
 
 $primary-color: #c40f14;
 $secondary-color: #df191e;
@@ -12,11 +13,32 @@ $black-five: #838383;
 $black-six: #363636;
 $black-seven: #343434;
 
-.banner-principal__img1-texto.col-6 {
+.banner-principal__img-texto {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 770px;
+  @include breakpoint(small-only) {
+    width: 100% !important;
+  }
+}
+
+.banner-principal__img {
+  margin-top: 0;
+  @include breakpoint(medium-only) {
+    margin-top: 60px;
+  }
+  @include breakpoint(small-only) {
+    display: flex !important;
+    align-items: center;
+  }
+}
+
+.banner-principal__img-texto--h2 {
+  @include breakpoint(small-only) {
+    color: #fff !important;
+    margin-top: 0px !important;
+    font-size: 23px !important;
+  }
 }
 
 .banner-principal__img1 {
@@ -26,20 +48,41 @@ $black-seven: #343434;
   background-size: cover;
   width: 100%;
   height: calc(100vh - 107px);
+  @include breakpoint(medium-only) {
+    height: calc(100vh - 60px);
+  }
+  @include breakpoint(small-only) {
+    background-color: rgba(0, 0, 0, 0.555);
+    background-blend-mode: multiply;
+  }
 }
 
 .banner-principal__img1 h2 {
+  margin-top: 143px;
   @include paragrafo-banner__principal;
-  color: $black-seven;
-  margin-top: 132px;
+  @include breakpoint(medium-up) {
+    color: $black-seven;
+    font-size: 40px;
+  }
+  @include breakpoint(medium-only) {
+    font-size: 30px;
+  }
+  @include breakpoint(small-only) {
+    color: #fff;
+    margin-top: 0px;
+  }
 }
 
-.banner-principal__img1 a {
+.banner-principal__link {
   background-color: $primary-color;
   padding: 6px 15px;
-  width: 280px;
+  max-width: 368px;
   @include button-page;
-  margin-top: 36px;
+  margin-top: 36px !important;
+  @include breakpoint(small-only) {
+    width: 100%;
+    padding: 6px 0 !important;
+  }
 }
 
 .banner-principal__img1 a:hover {
@@ -54,6 +97,13 @@ $black-seven: #343434;
   background-size: cover;
   width: 100%;
   height: calc(100vh - 107px);
+  @include breakpoint(medium-only) {
+    height: calc(100vh - 60px);
+  }
+  @include breakpoint(small-only) {
+    background-color: rgba(0, 0, 0, 0.555);
+    background-blend-mode: multiply;
+  }
 }
 
 .banner-principal__img2-texto.col-6 {
@@ -67,6 +117,10 @@ $black-seven: #343434;
   @include paragrafo-banner__principal;
   color: $black-seven;
   margin-top: 290px;
+  @include breakpoint(small-only) {
+    color: #fff;
+    margin-top: 0px;
+  }
 }
 
 .banner-principal__img2 a {
@@ -91,6 +145,13 @@ $black-seven: #343434;
   background-size: cover;
   width: 100%;
   height: calc(100vh - 107px);
+  @include breakpoint(medium-only) {
+    height: calc(100vh - 60px);
+  }
+  @include breakpoint(small-only) {
+    background-color: rgba(0, 0, 0, 0.555);
+    background-blend-mode: multiply;
+  }
 }
 
 .banner-principal__img3-texto.col-6 {
@@ -104,6 +165,7 @@ $black-seven: #343434;
   @include paragrafo-banner__principal;
   color: $black-seven;
   margin-top: 159px;
+  text-transform: uppercase;
 }
 
 .banner-principal__img3 a {
@@ -128,13 +190,13 @@ $black-seven: #343434;
   background-size: cover;
   width: 100%;
   height: calc(100vh - 107px);
-}
-
-.banner-principal__img4-texto.col-6 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 523px;
+  @include breakpoint(medium-only) {
+    height: calc(100vh - 60px);
+  }
+  @include breakpoint(small-only) {
+    background-color: rgba(0, 0, 0, 0.555);
+    background-blend-mode: multiply;
+  }
 }
 
 .banner-principal__img4 h2 {
@@ -165,6 +227,13 @@ $black-seven: #343434;
   background-size: cover;
   width: 100%;
   height: calc(100vh - 107px);
+  @include breakpoint(medium-only) {
+    height: calc(100vh - 60px);
+  }
+  @include breakpoint(small-only) {
+    background-color: rgba(0, 0, 0, 0.555);
+    background-blend-mode: multiply;
+  }
 }
 
 .banner-principal__img5-texto.col-6 {
@@ -182,7 +251,10 @@ $black-seven: #343434;
   opacity: 0.9;
   display: flex;
   flex-direction: column;
-  padding: 40px 25px;
+  padding: 60px 50px;
+  @include breakpoint(small-only) {
+    background-color: transparent;
+  }
 }
 
 .banner-principal__img5 a {
@@ -207,6 +279,13 @@ $black-seven: #343434;
   background-size: cover;
   width: 100%;
   height: calc(100vh - 107px);
+  @include breakpoint(medium-only) {
+    height: calc(100vh - 60px);
+  }
+  @include breakpoint(small-only) {
+    background-color: rgba(0, 0, 0, 0.555);
+    background-blend-mode: multiply;
+  }
 }
 
 .banner-principal__img6-texto.col-6 {
@@ -219,29 +298,135 @@ $black-seven: #343434;
 .banner-principal__img6 h2 {
   @include title-red;
   color: $primary-color;
-  background-color: #fff;
-  opacity: 0.9;
-  padding: 40px 0px 5px 20px;
-  margin-top: 141px;
+  margin-bottom: 10px;
 }
 
 .banner-principal__img6 p {
   @include paragrafo-premio;
   color: $black-seven;
-  background-color: #fff;
-  opacity: 0.9;
-  padding: 0px 0px 0 20px;
+  @include breakpoint(small-only) {
+    color: #fff;
+    font-size: 24px;
+  }
 }
 
-.banner-principal__img6 span {
+.banner-principal__img6 .banner-principal__img6-texto p:last-child {
   color: $black-five;
   @include paragrafo-span;
-  background-color: #fff;
-  opacity: 0.9;
-  padding: 5px 0px 40px 20px;
+  margin-top: 20px;
+  @include breakpoint(small-only) {
+    color: #fff;
+    font-size: 16px;
+  }
 }
 
 button.slick-next.slick-arrow,
 button.slick-prev.slick-arrow {
   display: none !important;
+}
+
+.banner-principal__img--conteudo {
+  display: flex;
+  justify-content: end;
+  @include breakpoint(small-only) {
+    justify-content: center;
+  }
+}
+
+.banner-principal__img1-texto {
+  @include breakpoint(medium-up) {
+    width: 500px;
+    margin-right: 0;
+  }
+
+  @include breakpoint(super-large-up) {
+    margin-right: 200px;
+  }
+  @include breakpoint(small-up) {
+    width: 430px;
+  }
+}
+
+.banner-principal__img2-texto {
+  width: 540px;
+}
+
+.banner-principal__img--conteudo_2 {
+  display: flex;
+  justify-content: center;
+}
+
+.mb-36 {
+  margin-bottom: 36px;
+}
+
+.banner-principal__img3-texto {
+  width: 470px;
+  margin-left: 400px;
+  @include breakpoint(small-only) {
+    margin-left: 0;
+  }
+}
+
+.banner-principal__img--conteudo_3 {
+  display: flex;
+  justify-content: center;
+}
+
+.banner-principal__img4-texto {
+  width: 540px;
+  margin-right: 200px;
+  @include breakpoint(small-only) {
+    margin-right: 0;
+  }
+}
+
+.banner-principal__img--conteudo_4 {
+  display: flex;
+  justify-content: end;
+}
+
+.banner-principal__img--conteudo_5 {
+  position: relative;
+  @include breakpoint(small-only) {
+    width: 100%;
+  }
+}
+
+.banner-principal__img5-texto {
+  position: absolute;
+  width: 55%;
+  right: 0;
+  @include breakpoint(small-only) {
+    position: relative;
+  }
+}
+
+.banner-principal__img--conteudo_6 {
+  position: relative;
+}
+
+.banner-principal__img6-texto {
+  width: 55%;
+  position: absolute;
+  right: 0;
+  @include breakpoint(small-only) {
+    position: relative;
+  }
+}
+
+.banner-principal__img6-texto {
+  width: 55%;
+  position: absolute;
+  right: 0;
+  margin-top: 141px;
+  background-color: #fff;
+  opacity: 0.9;
+  padding: 60px 50px;
+  @include breakpoint(small-only) {
+    position: relative;
+    background-color: transparent;
+    padding: 0 10px;
+    margin-top: 0;
+  }
 }
