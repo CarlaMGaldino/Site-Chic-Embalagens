@@ -41,6 +41,9 @@ $black-six: #363636;
   font-weight: bold;
   color: $black-four;
   margin-bottom: 20px;
+  @include breakpoint(medium-only) {
+    display: none;
+  }
   & a {
     margin-left: 30px;
   }
@@ -49,6 +52,10 @@ $black-six: #363636;
 .menu-scroll__navegacao--menu-principal .ancora-principal .trabalhe,
 .menu-scroll__navegacao--menu-principal .ancora-principal .contato {
   color: #fff;
+  &:hover {
+    color: $primary-color;
+    transition: 0.3s ease;
+  }
   @include breakpoint(medium-only) {
     display: none;
   }
@@ -159,7 +166,7 @@ nav.menu-nav-header {
 }
 
 .menu-mobile__scroll {
-  background-color: #fff;
+  background-color: $black-two;
   width: 25px;
   height: 2px;
   margin-right: 0px;
@@ -167,7 +174,7 @@ nav.menu-nav-header {
   &::after {
     content: "";
     display: block;
-    background-color: #fff;
+    background-color: $black-two;
     position: absolute;
     width: 25px;
     height: 2px;
@@ -176,7 +183,7 @@ nav.menu-nav-header {
   &::before {
     content: "";
     display: block;
-    background-color: #fff;
+    background-color: $black-two;
     position: absolute;
     width: 25px;
     height: 2px;
@@ -198,7 +205,7 @@ nav.menu-nav-header {
 }
 
 .menu-scroll {
-  background-color: $black-two;
+  background-color: #fff;
   padding: 10px 0;
   position: fixed;
   width: 100%;
@@ -217,7 +224,7 @@ nav.menu-nav-header {
       background-color: $black-two;
       position: absolute;
       padding: 20px;
-      top: 64px;
+      top: 62px;
       left: 0;
       width: 290px;
       transition: 0.25s ease;
@@ -251,6 +258,27 @@ nav.menu-nav-header {
       }
     }
   }
+}
+
+.menu-scroll.scroll-ativo {
+  background-color: $black-two;
+  & .menu-mobile__scroll {
+    background-color: #fff;
+    &::after {
+      background-color: #fff;
+    }
+    &::before {
+      background-color: #fff;
+    }
+  }
+}
+
+.menu-scroll__logo-chic .logo-chic__img {
+  display: none;
+}
+
+.menu-scroll__logo-chic .logo-chic__img.logo-ativa {
+  display: block;
 }
 
 a#menu-mobile__toggle {
