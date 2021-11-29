@@ -1,5 +1,7 @@
 @import "mixins";
+
 @import "breakpoint";
+
 
 $primary-color: #c40f14;
 $secondary-color: #df191e;
@@ -15,6 +17,7 @@ $black-seven: #343434;
 
 section.page-empresa {
   padding: 180px 0px 100px;
+
   overflow: hidden;
 }
 .page-empresa-conteudo-box1,
@@ -22,6 +25,13 @@ section.page-empresa {
   display: flex;
   justify-content: space-between;
   margin-bottom: 150px;
+
+}
+.page-empresa-conteudo-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 200px;
+
   width: 100%;
 }
 
@@ -44,6 +54,7 @@ section.page-empresa {
   width: 45%;
 }
 
+
 .page-empresa-conteudo {
   width: 45%;
 }
@@ -54,10 +65,12 @@ section.page-empresa {
 
 .page-empresa-conteudo-box1 h3,
 .page-empresa-conteudo-box2 h3 {
+
   @include title;
   color: $black-two;
   margin: 15px 0px 25px;
 }
+
 
 .page-empresa-conteudo-box1 p,
 .page-empresa-conteudo-box2 p {
@@ -68,6 +81,7 @@ section.page-empresa {
 
 .page-empresa-img:before {
   position: absolute;
+
   content: "";
   width: 663px;
   height: 476px;
@@ -77,6 +91,7 @@ section.page-empresa {
   background-repeat: no-repeat;
   background-size: contain;
   display: block;
+
   top: -52px;
   z-index: -1;
   right: -200px;
@@ -262,4 +277,5 @@ section.page-empresa {
   section.page-empresa {
     padding: 180px 0px 10px;
   }
+
 }
