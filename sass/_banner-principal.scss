@@ -1,5 +1,8 @@
 @import "mixins";
+
+
 @import "breakpoint";
+
 
 $primary-color: #c40f14;
 $secondary-color: #df191e;
@@ -12,6 +15,7 @@ $black-four: #1d1d1d;
 $black-five: #838383;
 $black-six: #363636;
 $black-seven: #343434;
+
 
 .banner-principal__img-texto {
   display: flex;
@@ -39,6 +43,7 @@ $black-seven: #343434;
     margin-top: 0px !important;
     font-size: 23px !important;
   }
+
 }
 
 .banner-principal__img1 {
@@ -48,6 +53,8 @@ $black-seven: #343434;
   background-size: cover;
   width: 100%;
   height: calc(100vh - 107px);
+
+  
   @include breakpoint(medium-only) {
     height: calc(100vh - 60px);
   }
@@ -83,6 +90,7 @@ $black-seven: #343434;
     width: 100%;
     padding: 6px 0 !important;
   }
+
 }
 
 .banner-principal__img1 a:hover {
@@ -97,6 +105,7 @@ $black-seven: #343434;
   background-size: cover;
   width: 100%;
   height: calc(100vh - 107px);
+
   @include breakpoint(medium-only) {
     height: calc(100vh - 60px);
   }
@@ -104,6 +113,7 @@ $black-seven: #343434;
     background-color: rgba(0, 0, 0, 0.555);
     background-blend-mode: multiply;
   }
+
 }
 
 .banner-principal__img2-texto.col-6 {
@@ -117,10 +127,12 @@ $black-seven: #343434;
   @include paragrafo-banner__principal;
   color: $black-seven;
   margin-top: 290px;
+
   @include breakpoint(small-only) {
     color: #fff;
     margin-top: 0px;
   }
+
 }
 
 .banner-principal__img2 a {
@@ -145,6 +157,7 @@ $black-seven: #343434;
   background-size: cover;
   width: 100%;
   height: calc(100vh - 107px);
+
   @include breakpoint(medium-only) {
     height: calc(100vh - 60px);
   }
@@ -152,6 +165,7 @@ $black-seven: #343434;
     background-color: rgba(0, 0, 0, 0.555);
     background-blend-mode: multiply;
   }
+
 }
 
 .banner-principal__img3-texto.col-6 {
@@ -165,7 +179,9 @@ $black-seven: #343434;
   @include paragrafo-banner__principal;
   color: $black-seven;
   margin-top: 159px;
+
   text-transform: uppercase;
+
 }
 
 .banner-principal__img3 a {
@@ -190,6 +206,7 @@ $black-seven: #343434;
   background-size: cover;
   width: 100%;
   height: calc(100vh - 107px);
+
   @include breakpoint(medium-only) {
     height: calc(100vh - 60px);
   }
@@ -197,6 +214,7 @@ $black-seven: #343434;
     background-color: rgba(0, 0, 0, 0.555);
     background-blend-mode: multiply;
   }
+
 }
 
 .banner-principal__img4 h2 {
@@ -227,6 +245,7 @@ $black-seven: #343434;
   background-size: cover;
   width: 100%;
   height: calc(100vh - 107px);
+
   @include breakpoint(medium-only) {
     height: calc(100vh - 60px);
   }
@@ -234,6 +253,7 @@ $black-seven: #343434;
     background-color: rgba(0, 0, 0, 0.555);
     background-blend-mode: multiply;
   }
+
 }
 
 .banner-principal__img5-texto.col-6 {
@@ -251,10 +271,13 @@ $black-seven: #343434;
   opacity: 0.9;
   display: flex;
   flex-direction: column;
+
+
   padding: 60px 50px;
   @include breakpoint(small-only) {
     background-color: transparent;
   }
+
 }
 
 .banner-principal__img5 a {
@@ -279,6 +302,7 @@ $black-seven: #343434;
   background-size: cover;
   width: 100%;
   height: calc(100vh - 107px);
+
   @include breakpoint(medium-only) {
     height: calc(100vh - 60px);
   }
@@ -298,12 +322,16 @@ $black-seven: #343434;
 .banner-principal__img6 h2 {
   @include title-red;
   color: $primary-color;
+
+
   margin-bottom: 10px;
+
 }
 
 .banner-principal__img6 p {
   @include paragrafo-premio;
   color: $black-seven;
+
   @include breakpoint(small-only) {
     color: #fff;
     font-size: 24px;
@@ -318,12 +346,14 @@ $black-seven: #343434;
     color: #fff;
     font-size: 16px;
   }
+
 }
 
 button.slick-next.slick-arrow,
 button.slick-prev.slick-arrow {
   display: none !important;
 }
+
 
 .banner-principal__img--conteudo {
   display: flex;
@@ -430,3 +460,4 @@ button.slick-prev.slick-arrow {
     margin-top: 0;
   }
 }
+

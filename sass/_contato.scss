@@ -1,0 +1,50 @@
+@import "mixins";
+@import "breakpoint";
+
+$primary-color: #c40f14;
+$secondary-color: #df191e;
+$tertiary-color: #b4b4b4;
+$fourth-color: #00000029;
+$black-one: #333333;
+$black-two: #151515;
+$black-three: #292929;
+$black-four: #1d1d1d;
+$black-five: #000000ea;
+$black-six: #363636;
+
+.page-contato__mapa {
+  background-image: url(/imagens/mapa.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 409px;
+}
+
+section.page-contato {
+  padding: 100px 0px;
+}
+
+.page-contato__conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px 50px;
+}
+
+.page-contato__conteudo .page-contato-vermelho {
+  @include sub-title;
+  color: $primary-color;
+  text-align: left;
+}
+
+.page-contato__conteudo h3 {
+  @include title;
+  color: $black-two;
+  margin: 10px 0px;
+}
+
+.page-contato__conteudo p {
+  @include paragrafo-texto;
+  color: $black-one;
+  font-weight: normal;
+}

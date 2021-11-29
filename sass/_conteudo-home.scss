@@ -231,7 +231,7 @@ section.Qualidade {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0px 62px;
+  padding: 30px 30px;
 }
 
 .empresa-qualidade__conteudo span {
@@ -259,6 +259,11 @@ section.Qualidade {
   background-color: $primary-color;
   max-width: 482px;
   margin-top: 30px;
+  padding: 12px;
+}
+.empresa-qualidade__conteudo a:hover {
+  background-color: $black-two;
+  padding: 12px;
 }
 
 /*media*/
@@ -290,7 +295,7 @@ section.Qualidade {
   }
 
   .empresa-qualidade__conteudo {
-    padding: 90px 10px;
+    padding: 190px 10px;
   }
   section.Qualidade {
     padding: 42px 0px;
