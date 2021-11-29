@@ -11,6 +11,8 @@
 @import "conteudo-home";
 @import "empresa-page";
 @import "banner-principal-dois";
+@import "contato";
+@import "embalagens";
 
 html {
   scroll-behavior: smooth;
@@ -38,11 +40,14 @@ $black-six: #363636;
 .container {
   max-width: 1340px;
   margin: 0 auto;
+  padding: 0px 10px !important;
   @include breakpoint(super-large-up) {
     max-width: 1500px;
+    padding: 0px 10px !important;
   }
   @include breakpoint(large-only) {
     max-width: 1200px;
+    padding: 0px 10px !important;
   }
   @include breakpoint(medium-only) {
     max-width: 100%;

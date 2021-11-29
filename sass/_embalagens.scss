@@ -1,0 +1,41 @@
+@import "mixins";
+@import "breakpoint";
+
+$primary-color: #c40f14;
+$secondary-color: #df191e;
+$tertiary-color: #b4b4b4;
+$fourth-color: #00000029;
+$black-one: #333333;
+$black-two: #151515;
+$black-three: #292929;
+$black-four: #1d1d1d;
+$black-five: #484848;
+$black-six: #363636;
+$black-seven: #343434;
+
+.embagens-personalizadas {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.embagens-personalizadas img {
+  max-width: 666px;
+  height: 447px;
+}
+
+.embagens-personalizadas a {
+  max-width: 33%;
+  margin: -2px;
+}
+
+.embagens-personalizadas a:hover {
+  width: 667px;
+  height: 447px;
+  background: linear-gradient(#4d4d4d 0%, #000 100%);
+  opacity: 0.75;
+}
+
+.embalagens {
+  margin-bottom: -2px;
+}
