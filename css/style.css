@@ -3425,6 +3425,13 @@ ul.producao-empresa__menu-conteudo a img {
   margin: 20px;
 }
 
+ul.producao-empresa__menu-conteudo a:hover img {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .producao-page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3505,6 +3512,10 @@ ul.producao-empresa__menu-conteudo a img {
   display: flex;
 }
 
+.producao-empresa__corpo-img img {
+  max-width: 100%;
+}
+
 .conteudo-box-2 .producao-empresa-img {
   width: 46%;
   position: relative;
@@ -3553,7 +3564,7 @@ ul.producao-empresa__menu-conteudo a img {
   height: 206.05px;
   background: transparent;
   border: 1px solid #b2b2b2;
-  top: 147px;
+  top: 171px;
   right: -41px;
   z-index: -1;
 }
@@ -3642,7 +3653,295 @@ ul.producao-empresa__menu-conteudo a img {
   max-width: 100%;
 }
 
+.conteudo-box6-img:before {
+  content: "";
+  position: absolute;
+  width: 426.49px;
+  height: 370.1px;
+  background: transparent;
+  border: 3px solid #c6121d;
+  right: 292px;
+  top: -52px;
+  z-index: -1;
+}
+
+.conteudo-box6-img:after {
+  content: "";
+  position: absolute;
+  width: 366.92px;
+  height: 170.73px;
+  background: transparent;
+  border: 1px solid #b2b2b2;
+  right: 206px;
+  top: 294px;
+  z-index: -1;
+}
+
+.conteudo-box6-img {
+  position: relative;
+}
+
+.conteudo-box7-img {
+  margin: 164px 0px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+.conteudo-box7-img::before {
+  content: "";
+  position: absolute;
+  width: 388.82px;
+  height: 383.24px;
+  background: transparent;
+  border: 3px solid #c6121d;
+  left: 287px;
+  top: -55px;
+  z-index: -1;
+}
+
+.conteudo-box7-img::after {
+  content: "";
+  position: absolute;
+  width: 355.47px;
+  height: 168.9px;
+  background: transparent;
+  border: 1px solid #b2b2b2;
+  left: 214px;
+  top: 290px;
+  z-index: -1;
+}
+
+.conteudo-box9-img {
+  margin: 100px 0px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.conteudo-box9-img img {
+  max-width: 100%;
+}
+
+.conteudo-box9-img::before {
+  content: "";
+  position: absolute;
+  width: 388.82px;
+  height: 383.24px;
+  background: transparent;
+  border: 3px solid #c6121d;
+  z-index: -1;
+  left: 125px;
+  top: -57px;
+}
+
+.conteudo-box9-img::after {
+  content: "";
+  position: absolute;
+  width: 355.47px;
+  height: 168.9px;
+  background: transparent;
+  border: 1px solid #b2b2b2;
+  left: 10px;
+  top: 284px;
+  z-index: -1;
+}
+
+.conteudo-box10-img {
+  margin: 160px 0px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+.conteudo-box10-img img {
+  max-width: 100%;
+}
+
+.conteudo-box10-img:before {
+  position: absolute;
+  content: "";
+  width: 388.82px;
+  height: 383.24px;
+  background: transparent;
+  border: 3px solid #c6121d;
+  right: -67px;
+  top: -55px;
+  z-index: -1;
+}
+
+.conteudo-box10-img:after {
+  position: absolute;
+  content: "";
+  width: 355.47px;
+  height: 168.9px;
+  background: transparent;
+  border: 1px solid #b2b2b2;
+  top: 313px;
+  right: 57px;
+  z-index: -1;
+}
+
+.conteudo-box7-img img {
+  max-width: 100%;
+}
+
 /*fim div imagens*/
+@media screen and (max-width: 940px) {
+  .conteudo-box-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .producao-empresa__corpo-texto.conteudo-box2 {
+    width: 100%;
+  }
+  .conteudo-box-2 .producao-empresa-img {
+    width: 100%;
+    margin-bottom: 178px;
+  }
+  .producao-page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .producao-empresa {
+    width: 100%;
+  }
+  ul.producao-empresa__menu-conteudo a {
+    width: 307px;
+  }
+  .producao-empresa__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .producao-empresa__corpo {
+    width: 100%;
+  }
+  .producao-empresa-img:after {
+    top: -36px;
+    left: -41px;
+  }
+  .conteudo-box7-img {
+    margin-bottom: 113px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .conteudo-box10-img {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .producao-empresa__corpo-img:after {
+    left: 196px;
+    top: 493px;
+    height: 205px;
+  }
+  .producao-empresa__corpo-img:before {
+    top: 662px;
+  }
+  .producao-empresa-img.conteudo-box2:before {
+    top: -74px;
+    left: 101px;
+  }
+  .conteudo-box3-img:before {
+    right: 155px;
+    top: -44px;
+    height: 264.33px;
+  }
+  .conteudo-box3-img:after {
+    top: 58px;
+  }
+  .conteudo-box4-img:before {
+    height: 213.33px;
+    left: 150px;
+    top: 49px;
+  }
+  .conteudo-box4-img:after {
+    height: 168.9px;
+    left: 50px;
+    top: 76px;
+  }
+  .conteudo-box6-img:before {
+    right: 206px;
+    top: -52px;
+    height: 179.1px;
+  }
+  .conteudo-box6-img:after {
+    height: 170.73px;
+    right: 160px;
+    top: -24px;
+  }
+  .conteudo-box7-img {
+    margin-bottom: 51px;
+    margin-top: 110px;
+  }
+  .conteudo-box7-img::before {
+    height: 209.24px;
+    left: 197px;
+    top: -59px;
+  }
+  .conteudo-box7-img::after {
+    height: 168.9px;
+    left: 115px;
+    top: -25px;
+  }
+  .conteudo-box9-img {
+    margin: 58px 0px;
+  }
+  .conteudo-box9-img::before {
+    height: 199.24px;
+  }
+  .conteudo-box9-img::after {
+    left: 41px;
+    top: -27px;
+  }
+  .conteudo-box10-img:before {
+    height: 173.24px;
+    right: 127px;
+    top: -55px;
+  }
+  .conteudo-box10-img:after {
+    top: 90px;
+    right: 57px;
+  }
+  .producao-empresa__corpo-texto {
+    padding-bottom: 53px;
+  }
+  .conteudo-box4-img {
+    margin: 117px 0px;
+  }
+  section.producao {
+    padding: 30px 0px;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
