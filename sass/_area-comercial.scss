@@ -1,0 +1,102 @@
+@import "mixins";
+
+@import "breakpoint";
+
+$primary-color: #c40f14;
+$secondary-color: #df191e;
+$tertiary-color: #b4b4b4;
+$fourth-color: #00000029;
+$black-one: #333333;
+$black-two: #151515;
+$black-three: #292929;
+$black-four: #1d1d1d;
+$black-five: #484848;
+$black-six: #363636;
+$black-seven: #343434;
+@media screen and (max-width: 940px) {
+  .area-comercial .page-empresa-img:before {
+    top: 772px;
+    right: -216px;
+  }
+  .area-comercial .page-empresa-img:after {
+    top: 906px;
+  }
+  .area-comercial .page-empresa-img2:before {
+    top: 447px;
+  }
+  .area-comercial .page-empresa-img2:after {
+    top: 597px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.page-empresa.area-comercial {
+    margin-top: -32px;
+  }
+  .area-comercial__conteudo .page-empresa-img:before {
+    top: 100px;
+  }
+  .area-comercial__conteudo.page-empresa-img:after {
+    top: 120px;
+  }
+  .area-comercial__conteudo .page-empresa-foto2 {
+    margin-bottom: 52px;
+  }
+
+  .area-comercial__conteudo .page-empresa-conteudo2 p {
+    margin-bottom: -30px;
+  }
+
+  .area-comercial__conteudo .page-empresa-img2:before {
+    top: 90px;
+  }
+
+  .area-comercial__conteudo .page-empresa-img2:after {
+    top: 73px;
+  }
+  .area-comercial__conteudo .page-empresa-conteudo {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .area-comercial__conteudo .page-empresa-conteudo-box1 {
+    margin-top: -127px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .area-comercial__conteudo .page-empresa-conteudo-box2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .area-comercial__conteudo .page-empresa-conteudo-box1 {
+    margin-bottom: 10px;
+    margin-top: -68px;
+  }
+
+  section.page-empresa .area-comercial {
+    padding: 67px 0px 10px !important;
+  }
+  .area-comercial__conteudo .page-empresa-img:after {
+    top: 120px;
+  }
+}
+
+/*after e before*/
+@media screen and (min-width: 380px) and (max-width: 740px) {
+  .area-comercial__conteudo .page-empresa-img:before {
+    top: 192px;
+  }
+
+  .area-comercial__conteudo .page-empresa-img:after {
+    top: 261px;
+  }
+
+  .area-comercial__conteudo .page-empresa-img2:before {
+    top: -31px;
+  }
+  .area-comercial__conteudo .page-empresa-img2:after {
+    top: -14px;
+    left: -51px;
+  }
+}

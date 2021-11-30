@@ -41,6 +41,7 @@ $black-seven: #343434;
   font-size: 22px;
   line-height: 1em;
   text-align: center;
+  text-transform: uppercase;
   @include breakpoint(small-only) {
     font-size: 16px;
   }
@@ -52,6 +53,17 @@ $black-seven: #343434;
   font-size: 22px;
   line-height: 1em;
   text-align: left;
+  @include breakpoint(small-only) {
+    font-size: 18px;
+  }
+}
+
+@mixin paragrafo-span-2 {
+  font-family: "Poppins" sans-serif;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 1em;
+  text-transform: uppercase;
   @include breakpoint(small-only) {
     font-size: 18px;
   }
@@ -87,7 +99,6 @@ $black-seven: #343434;
   font-size: 19px;
   line-height: 35px;
   text-align: left;
-
   @include breakpoint(super-small-only) {
     font-size: 14px;
   }
