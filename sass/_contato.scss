@@ -12,14 +12,6 @@ $black-four: #1d1d1d;
 $black-five: #000000ea;
 $black-six: #363636;
 
-.page-contato__mapa {
-  background-image: url(/imagens/mapa.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 409px;
-}
-
 section.page-contato {
   padding: 100px 0px;
 }
@@ -47,4 +39,10 @@ section.page-contato {
   @include paragrafo-texto;
   color: $black-one;
   font-weight: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .page-contato__conteudo {
+    padding: 0px;
+  }
 }

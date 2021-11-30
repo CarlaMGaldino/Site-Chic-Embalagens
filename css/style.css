@@ -991,9 +991,9 @@ section.sobre-empresa__principal {
   text-align: center;
   color: #fff;
   text-transform: uppercase;
-
+  -webkit-transition: 1.5em;
+  transition: 1.5em;
   margin-top: 36px !important;
-
 }
 
 @media (max-width: 48em) {
@@ -1868,7 +1868,7 @@ p.footer-conteudo__span:after {
 
 /*seção sobre empresa*/
 section.sobre-empresa__principal {
-  margin: 100px 10px;
+  margin: 6px 10px 30px;
   overflow: hidden;
   padding: 100px 0px;
 }
@@ -1892,6 +1892,7 @@ section.sobre-empresa__principal {
   font-size: 22px;
   line-height: 1em;
   text-align: center;
+  text-transform: uppercase;
   color: #c40f14;
   text-transform: uppercase;
 }
@@ -2213,6 +2214,7 @@ section.Qualidade {
   font-size: 22px;
   line-height: 1em;
   text-align: center;
+  text-transform: uppercase;
   text-align: left;
   text-transform: uppercase;
   color: #c40f14;
@@ -2454,10 +2456,9 @@ section.Qualidade {
 }
 
 section.page-empresa {
-  padding: 180px 0px 100px;
-
+  padding: 100px 0px 100px;
+  margin: 70px 0px;
   overflow: hidden;
-
 }
 
 .page-empresa-conteudo-box1,
@@ -2468,7 +2469,17 @@ section.page-empresa {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 150px;
+  margin-bottom: 200px;
+}
+
+.page-empresa-conteudo-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 200px;
   width: 100%;
 }
 
@@ -2501,7 +2512,9 @@ section.page-empresa {
 }
 
 .page-empresa-conteudo-box1 h3,
-.page-empresa-conteudo-box2 h3 {
+.page-empresa-conteudo-box2 h3,
+.page-empresa-conteudo-box3 h3,
+.page-empresa-conteudo-box4 h3 {
   font-family: "Poppins" sans-serif;
   font-weight: 300;
   font-size: 44px;
@@ -2514,13 +2527,17 @@ section.page-empresa {
 
 @media (max-width: 48em) {
   .page-empresa-conteudo-box1 h3,
-  .page-empresa-conteudo-box2 h3 {
+  .page-empresa-conteudo-box2 h3,
+  .page-empresa-conteudo-box3 h3,
+  .page-empresa-conteudo-box4 h3 {
     font-size: 20px;
   }
 }
 
 .page-empresa-conteudo-box1 p,
-.page-empresa-conteudo-box2 p {
+.page-empresa-conteudo-box2 p,
+.page-empresa-conteudo-box3 p,
+.page-empresa-conteudo-box4 p {
   font-family: "Poppins" sans-serif;
   font-weight: 400;
   font-size: 19px;
@@ -2532,14 +2549,15 @@ section.page-empresa {
 
 @media (max-width: 37em) {
   .page-empresa-conteudo-box1 p,
-  .page-empresa-conteudo-box2 p {
+  .page-empresa-conteudo-box2 p,
+  .page-empresa-conteudo-box3 p,
+  .page-empresa-conteudo-box4 p {
     font-size: 14px;
   }
 }
 
 .page-empresa-img:before {
   position: absolute;
-
   content: "";
   width: 663px;
   height: 476px;
@@ -2549,7 +2567,6 @@ section.page-empresa {
   background-repeat: no-repeat;
   background-size: contain;
   display: block;
-
   top: -52px;
   z-index: -1;
   right: -200px;
@@ -2608,7 +2625,113 @@ section.page-empresa {
   left: -127px;
 }
 
+/*principal*/
+.page-empresa-conteudo-box3,
+.page-empresa-conteudo-box4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.page-empresa-foto4,
+.page-empresa-foto3 {
+  width: 47%;
+}
+
+.page-empresa-conteudo3,
+.page-empresa-conteudo4 {
+  width: 47%;
+}
+
+.page-empresa-img3 img,
+.page-empresa-img4 img {
+  width: 100%;
+}
+
+.page-empresa-conteudo-box3 {
+  margin-bottom: 180px;
+}
+
+.page-empresa-img4:after {
+  position: absolute;
+  content: "";
+  width: 235px;
+  height: 282px;
+  background: transparent;
+  border: 1px solid #b2b2b2;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  top: -112px;
+  z-index: -1;
+  left: -94px;
+}
+
+.page-empresa-img3:after {
+  position: absolute;
+  content: "";
+  width: 324px;
+  height: 190px;
+  background: transparent;
+  border: 1px solid #b2b2b2;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  top: 327px;
+  z-index: -1;
+  right: -99px;
+}
+
+.page-empresa-foto3,
+.page-empresa-foto4 {
+  position: relative;
+}
+
+.page-empresa-img3:before {
+  position: absolute;
+  content: "";
+  width: 673px;
+  height: 466px;
+  background: transparent;
+  border: 3px solid #c6121d;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  top: -50px;
+  z-index: -1;
+  right: -277px;
+}
+
+.page-empresa-img4:before {
+  position: absolute;
+  content: "";
+  width: 663px;
+  height: 476px;
+  background: transparent;
+  border: 3px solid #c6121d;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  top: 40px;
+  z-index: -1;
+  left: -277px;
+}
+
 @media screen and (max-width: 940px) {
+  .page-empresa-img3:before {
+    top: -85px;
+  }
+  .page-empresa-img3:after {
+    top: -40px;
+  }
+  .page-empresa-img4:before {
+    top: -52px;
+  }
   .page-empresa-conteudo-box1 {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -2632,6 +2755,33 @@ section.page-empresa {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .page-empresa-conteudo-box3 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .page-empresa-conteudo-box4 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .page-empresa-conteudo3,
+  .page-empresa-conteudo4 {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .page-empresa-foto4,
+  .page-empresa-foto3 {
+    width: 100%;
+  }
+  section.page-empresa {
+    padding: 87px 0px 100px;
+  }
+  .page-empresa-conteudo-box3 {
+    margin-bottom: 173px;
   }
   .page-empresa-img:before {
     width: 498px;
@@ -2690,6 +2840,14 @@ section.page-empresa {
 }
 
 @media screen and (max-width: 768px) {
+  .page-empresa-img3:before {
+    width: 425px;
+    height: 205px;
+  }
+  .page-empresa-img4:before {
+    width: 499px;
+    height: 234px;
+  }
   .page-empresa-img2:before {
     width: 380px;
     height: 135px;
@@ -2727,10 +2885,48 @@ section.page-empresa {
   .page-empresa-conteudo-box2 {
     margin-bottom: 40px;
   }
+  /*principal*/
   section.page-empresa {
-    padding: 180px 0px 10px;
+    padding: 105px 0px 10px;
   }
-
+  .page-empresa-img3,
+  .page-empresa-img3 img,
+  .page-empresa-img4,
+  .page-empresa-img4 img {
+    width: 100%;
+  }
+  .page-empresa-conteudo-box3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .page-empresa-conteudo3 {
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+  .page-empresa-conteudo4 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .page-empresa-conteudo-box4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .page-empresa-conteudo3 {
+    width: 100%;
+  }
+  .page-empresa-conteudo4 {
+    width: 100%;
+  }
 }
 
 .banner-principal__empresa {
@@ -2797,14 +2993,6 @@ section.page-empresa {
           align-items: center;
 }
 
-.page-contato__mapa {
-  background-image: url(/imagens/mapa.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 409px;
-}
-
 section.page-contato {
   padding: 100px 0px;
 }
@@ -2829,6 +3017,7 @@ section.page-contato {
   font-size: 22px;
   line-height: 1em;
   text-align: center;
+  text-transform: uppercase;
   color: #c40f14;
   text-align: left;
 }
@@ -2872,37 +3061,588 @@ section.page-contato {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .page-contato__conteudo {
+    padding: 0px;
+  }
+}
+
 .embagens-personalizadas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.embalagens-personalizadas-img {
+  position: relative;
+  width: 33.33%;
+}
+
+.embalagens-personalizadas-img__span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.embalagens-personalizadas-img:hover .embalagens-personalizadas-img__span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  font-family: "Poppins" sans-serif;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 1em;
+  text-transform: uppercase;
+  background-color: #000000a6;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 48em) {
+  .embalagens-personalizadas-img:hover .embalagens-personalizadas-img__span {
+    font-size: 18px;
+  }
+}
+
+.embalagens-personalizadas-img img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  section.page-empresa.embalagens-tecnicas {
+    padding: 167px 0px !important;
+  }
+  section.embalagens {
+    margin-top: -173px;
+  }
+  .pag-empresa {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .pag-empresa-af-be:after {
+    width: 250px;
+    height: 140px;
+    top: 168px;
+    right: -171px;
+  }
+  .page-empresa-img:before {
+    width: 461px;
+    height: 171px;
+    top: 89px;
+    right: -342px;
+  }
+  .pag-empresa-foto-ajuste {
+    margin-bottom: 25px;
+  }
+  .pag-empresa {
+    margin-top: -181px;
+  }
+  .pag-empresa {
+    margin-top: -181px;
+    margin-bottom: 10px;
+  }
+  .embalagens-personalizadas-img {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .area-comercial .page-empresa-img:before {
+    top: 772px;
+    right: -216px;
+  }
+  .area-comercial .page-empresa-img:after {
+    top: 906px;
+  }
+  .area-comercial .page-empresa-img2:before {
+    top: 447px;
+  }
+  .area-comercial .page-empresa-img2:after {
+    top: 597px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.page-empresa.area-comercial {
+    margin-top: -32px;
+  }
+  .area-comercial__conteudo .page-empresa-img:before {
+    top: 100px;
+  }
+  .area-comercial__conteudo.page-empresa-img:after {
+    top: 120px;
+  }
+  .area-comercial__conteudo .page-empresa-foto2 {
+    margin-bottom: 52px;
+  }
+  .area-comercial__conteudo .page-empresa-conteudo2 p {
+    margin-bottom: -30px;
+  }
+  .area-comercial__conteudo .page-empresa-img2:before {
+    top: 90px;
+  }
+  .area-comercial__conteudo .page-empresa-img2:after {
+    top: 73px;
+  }
+  .area-comercial__conteudo .page-empresa-conteudo {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .area-comercial__conteudo .page-empresa-conteudo-box1 {
+    margin-top: -127px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .area-comercial__conteudo .page-empresa-conteudo-box2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .area-comercial__conteudo .page-empresa-conteudo-box1 {
+    margin-bottom: 10px;
+    margin-top: -68px;
+  }
+  section.page-empresa .area-comercial {
+    padding: 67px 0px 10px !important;
+  }
+  .area-comercial__conteudo .page-empresa-img:after {
+    top: 120px;
+  }
+}
+
+/*after e before*/
+@media screen and (min-width: 380px) and (max-width: 740px) {
+  .area-comercial__conteudo .page-empresa-img:before {
+    top: 192px;
+  }
+  .area-comercial__conteudo .page-empresa-img:after {
+    top: 261px;
+  }
+  .area-comercial__conteudo .page-empresa-img2:before {
+    top: -31px;
+  }
+  .area-comercial__conteudo .page-empresa-img2:after {
+    top: -14px;
+    left: -51px;
+  }
+}
+
+.qualidade-empresa__lista span {
+  font-family: "Poppins" sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #c40f14;
+}
+
+@media (max-width: 48em) {
+  .qualidade-empresa__lista span {
+    font-size: 16px;
+  }
+}
+
+.qualidade-empresa__lista h3 {
+  font-family: "Poppins" sans-serif;
+  font-weight: 300;
+  font-size: 44px;
+  line-height: 1em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #151515;
+  margin: 10px 0 40px 0;
+}
+
+@media (max-width: 48em) {
+  .qualidade-empresa__lista h3 {
+    font-size: 20px;
+  }
+}
+
+.qualidade-empresa__lista p,
+.qualidade-empresa__lista li {
+  font-family: "Poppins" sans-serif;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 35px;
+  text-align: left;
+  color: #333333;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 37em) {
+  .qualidade-empresa__lista p,
+  .qualidade-empresa__lista li {
+    font-size: 14px;
+  }
+}
+
+.qualidade-empresa__lista li {
+  margin-bottom: 25px;
+}
+
+.qualidade-empresa__lista {
+  margin-top: -80px;
+  margin-bottom: 248px;
+}
+
+@media screen and (max-width: 940px) {
+  .qualidade-empresa__lista {
+    margin-top: -80px;
+    margin-bottom: 74px;
+  }
+  .qualidade-empresa .page-empresa-img:before {
+    top: 845px;
+  }
+  .qualidade-empresa .page-empresa-img:after {
+    top: 949px;
+  }
+  .qualidade-empresa .page-empresa-img2:before {
+    top: 535px;
+  }
+  .qualidade-empresa .page-empresa-img2:after {
+    top: 669px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .qualidade-empresa__lista {
+    margin-top: 31px;
+    margin-bottom: 125px;
+  }
+  .qualidade-empresa .page-empresa-img:before {
+    top: 100px;
+  }
+  .qualidade-empresa .page-empresa-img:after {
+    top: -7px;
+    right: -70px;
+  }
+  .qualidade-empresa .page-empresa-img2:before {
+    top: -45px;
+  }
+  .qualidade-empresa .page-empresa-img2:after {
+    top: -67px;
+  }
+  .qualidade-empresa__lista li {
+    margin-bottom: 15px;
+  }
+}
+
+/*menu navegação page produção*/
+section.producao {
+  padding: 100px 0px;
+  overflow: hidden;
+}
+
+ul.producao-empresa__menu-conteudo li {
+  font-family: "Poppins" sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5em;
+  text-align: center;
+  color: #484848;
+  text-transform: uppercase;
+  color: #333333;
+  margin-left: 21px;
+}
+
+@media (max-width: 48em) {
+  ul.producao-empresa__menu-conteudo li {
+    font-size: 16px;
+  }
+}
+
+ul.producao-empresa__menu-conteudo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 281px;
+  height: 42px;
+  background: #f4f4f4;
+  margin-bottom: 10px;
+}
+
+ul.producao-empresa__menu-conteudo a img {
+  width: 15.76px;
+  height: 13.75px;
+  background: transparent;
+  margin: 20px;
+}
+
+.producao-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.producao-empresa__corpo {
+  width: 75%;
+  margin-top: 50px;
+  position: relative;
+}
+
+.producao-empresa {
+  width: 20%;
+}
+
+.producao-empresa__corpo-texto span {
+  font-family: "Poppins" sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1em;
+  text-align: left;
+  color: #c40f14;
+}
+
+@media (max-width: 48em) {
+  .producao-empresa__corpo-texto span {
+    font-size: 18px;
+  }
+}
+
+.producao-empresa__corpo-texto h3 {
+  font-family: "Poppins" sans-serif;
+  font-weight: 300;
+  font-size: 44px;
+  line-height: 1em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #151515;
+  margin: 20px 0px 30px 0px;
+}
+
+@media (max-width: 48em) {
+  .producao-empresa__corpo-texto h3 {
+    font-size: 20px;
+  }
+}
+
+.producao-empresa__corpo-texto p {
+  font-family: "Poppins" sans-serif;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 35px;
+  text-align: left;
+  color: #333333;
+}
+
+@media (max-width: 37em) {
+  .producao-empresa__corpo-texto p {
+    font-size: 14px;
+  }
+}
+
+.producao-empresa__corpo-texto {
+  padding-bottom: 100px;
+}
+
+.conteudo-paragrafo-2 {
+  margin-top: 89px;
+}
+
+.conteudo-box-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.conteudo-box-2 .producao-empresa-img {
+  width: 46%;
+  position: relative;
+  top: 81px;
+  margin-left: 50px;
+}
+
+.conteudo-box-2 .producao-empresa-img img {
   width: 100%;
 }
 
-.embagens-personalizadas img {
-  max-width: 666px;
-  height: 447px;
+.producao-empresa__corpo-texto.conteudo-box2 {
+  width: 46%;
+  padding-right: 20px;
 }
 
-.embagens-personalizadas a {
-  max-width: 33%;
-  margin: -2px;
+/*before e after page*/
+.producao-empresa__corpo-img:after {
+  position: absolute;
+  content: "";
+  width: 426.49px;
+  height: 370.1px;
+  background: transparent;
+  border: 3px solid #c6121d;
+  left: 278px;
+  top: 359px;
+  z-index: -1;
 }
 
-.embagens-personalizadas a:hover {
-  width: 667px;
-  height: 447px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#4d4d4d), to(#000));
-  background: linear-gradient(#4d4d4d 0%, #000 100%);
-  opacity: 0.75;
+.producao-empresa__corpo-img:before {
+  position: absolute;
+  content: "";
+  width: 366.92px;
+  height: 170.73px;
+  background: transparent;
+  border: 1px solid #b2b2b2;
+  right: 144px;
+  top: 694px;
+  z-index: -1;
 }
 
-.embalagens {
-  margin-bottom: -2px;
+.producao-empresa-img:after {
+  position: absolute;
+  content: "";
+  width: 209.62px;
+  height: 206.05px;
+  background: transparent;
+  border: 1px solid #b2b2b2;
+  top: 147px;
+  right: -41px;
+  z-index: -1;
 }
 
+.producao-empresa-img.conteudo-box2:before {
+  position: absolute;
+  content: "";
+  width: 429.91px;
+  height: 308.66px;
+  background: transparent;
+  border: 3px solid #c6121d;
+  top: -74px;
+  left: -30px;
+  z-index: -1;
+}
+
+/*fim after e before*/
+/*div imagens*/
+.conteudo-box3-img:before {
+  position: absolute;
+  content: "";
+  width: 455.88px;
+  height: 449.33px;
+  background: transparent;
+  border: 3px solid #c6121d;
+  right: 131px;
+  z-index: -1;
+  top: -44px;
+}
+
+.conteudo-box3-img:after {
+  position: absolute;
+  content: "";
+  width: 416.78px;
+  height: 198.03px;
+  background: transparent;
+  border: 1px solid #b2b2b2;
+  top: 357px;
+  right: 100px;
+  z-index: -1;
+}
+
+.conteudo-box3-img {
+  margin: 70px 0px;
+  position: relative;
+}
+
+.conteudo-box3-img img {
+  max-width: 100%;
+}
+
+.conteudo-box4-img {
+  margin: 150px 0px;
+  position: relative;
+}
+
+.conteudo-box4-img img {
+  max-width: 100%;
+}
+
+.conteudo-box4-img:before {
+  position: absolute;
+  content: "";
+  width: 455.88px;
+  height: 413.33px;
+  background: transparent;
+  border: 3px solid #c6121d;
+  left: -83px;
+  z-index: -1;
+  top: -62px;
+}
+
+.conteudo-box4-img:after {
+  content: "";
+  position: absolute;
+  width: 355.47px;
+  height: 168.9px;
+  background: transparent;
+  border: 1px solid #b2b2b2;
+  left: -187px;
+  top: 304px;
+  z-index: -1;
+}
+
+.conteudo-box6-img img {
+  max-width: 100%;
+}
+
+/*fim div imagens*/
 html {
   scroll-behavior: smooth;
 }

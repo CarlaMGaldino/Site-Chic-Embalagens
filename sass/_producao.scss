@@ -1,0 +1,222 @@
+@import "mixins";
+@import "breakpoint";
+
+$primary-color: #c40f14;
+$secondary-color: #df191e;
+$tertiary-color: #b4b4b4;
+$fourth-color: #00000029;
+$black-one: #333333;
+$black-two: #151515;
+$black-three: #292929;
+$black-four: #1d1d1d;
+$black-five: #484848;
+$black-six: #363636;
+$black-seven: #343434;
+
+/*menu navegação page produção*/
+section.producao {
+  padding: 100px 0px;
+  overflow: hidden;
+}
+
+ul.producao-empresa__menu-conteudo li {
+  @include paragrafo_menu;
+  color: $black-one;
+  margin-left: 21px;
+}
+
+ul.producao-empresa__menu-conteudo a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 281px;
+  height: 42px;
+  background: #f4f4f4;
+  margin-bottom: 10px;
+}
+
+ul.producao-empresa__menu-conteudo a img {
+  width: 15.76px;
+  height: 13.75px;
+  background: transparent;
+  margin: 20px;
+}
+
+.producao-page {
+  display: flex;
+  justify-content: space-between;
+}
+
+.producao-empresa__corpo {
+  width: 75%;
+  margin-top: 50px;
+  position: relative;
+}
+
+.producao-empresa {
+  width: 20%;
+}
+
+.producao-empresa__corpo-texto span {
+  @include paragrafo-span;
+  color: $primary-color;
+}
+.producao-empresa__corpo-texto h3 {
+  @include title;
+  color: $black-two;
+  margin: 20px 0px 30px 0px;
+}
+
+.producao-empresa__corpo-texto p {
+  @include paragrafo-texto;
+  color: $black-one;
+}
+
+.producao-empresa__corpo-texto {
+  padding-bottom: 100px;
+}
+
+.conteudo-paragrafo-2 {
+  margin-top: 89px;
+}
+
+.conteudo-box-2 {
+  display: flex;
+}
+
+.conteudo-box-2 .producao-empresa-img {
+  width: 46%;
+  position: relative;
+  top: 81px;
+  margin-left: 50px;
+}
+.conteudo-box-2 .producao-empresa-img img {
+  width: 100%;
+}
+.producao-empresa__corpo-texto.conteudo-box2 {
+  width: 46%;
+  padding-right: 20px;
+}
+
+/*before e after page*/
+.producao-empresa__corpo-img:after {
+  position: absolute;
+  content: "";
+  width: 426.49px;
+  height: 370.1px;
+  background: transparent;
+  border: 3px solid #c6121d;
+  left: 278px;
+  top: 359px;
+  z-index: -1;
+}
+
+.producao-empresa__corpo-img:before {
+  position: absolute;
+  content: "";
+  width: 366.92px;
+  height: 170.73px;
+  background: transparent;
+  border: 1px solid #b2b2b2;
+  right: 144px;
+  top: 694px;
+  z-index: -1;
+}
+
+.producao-empresa-img:after {
+  position: absolute;
+  content: "";
+  width: 209.62px;
+  height: 206.05px;
+  background: transparent;
+  border: 1px solid #b2b2b2;
+  top: 147px;
+  right: -41px;
+  z-index: -1;
+}
+
+.producao-empresa-img.conteudo-box2:before {
+  position: absolute;
+  content: "";
+  width: 429.91px;
+  height: 308.66px;
+  background: transparent;
+  border: 3px solid #c6121d;
+  top: -74px;
+  left: -30px;
+  z-index: -1;
+}
+
+/*fim after e before*/
+
+/*div imagens*/
+.conteudo-box3-img:before {
+  position: absolute;
+  content: "";
+  width: 455.88px;
+  height: 449.33px;
+  background: transparent;
+  border: 3px solid #c6121d;
+  right: 131px;
+  z-index: -1;
+  top: -44px;
+}
+
+.conteudo-box3-img:after {
+  position: absolute;
+  content: "";
+  width: 416.78px;
+  height: 198.03px;
+  background: transparent;
+  border: 1px solid #b2b2b2;
+  top: 357px;
+  right: 100px;
+  z-index: -1;
+}
+
+.conteudo-box3-img {
+  margin: 70px 0px;
+  position: relative;
+}
+.conteudo-box3-img img {
+  max-width: 100%;
+}
+
+.conteudo-box4-img {
+  margin: 150px 0px;
+  position: relative;
+}
+
+.conteudo-box4-img img {
+  max-width: 100%;
+}
+
+.conteudo-box4-img:before {
+  position: absolute;
+  content: "";
+  width: 455.88px;
+  height: 413.33px;
+  background: transparent;
+  border: 3px solid #c6121d;
+  left: -83px;
+  z-index: -1;
+  top: -62px;
+}
+
+.conteudo-box4-img:after {
+  content: "";
+  position: absolute;
+  width: 355.47px;
+  height: 168.9px;
+  background: transparent;
+  border: 1px solid #b2b2b2;
+  left: -187px;
+  top: 304px;
+  z-index: -1;
+}
+
+.conteudo-box6-img img {
+  max-width: 100%;
+}
+
+/*fim div imagens*/
