@@ -10,6 +10,7 @@
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
   <link rel="stylesheet" href="css/style.min.css">
+  <script src="https://kit.fontawesome.com/e87723997d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -103,36 +104,261 @@
     </section>
 
     <section class="presentes">
-      <div class="container">
-        <div class="presentes-secao-menu">
-          <div class="div-menu-presentes"> </div>
-          <div class="div presentes-secao-menu__conteudo">
-            <div class="presentes-secao-menu__conteudo-img"><img src="imagens/ChicEmbalagens_catalogoEBOOK-min.jpg" alt="Embalagens de presente"></div>
-            <div class="presentes-secao-menu__conteudo-texto">
-              <span>home > embalagens para presentes > <span class="colorido">linha infantil</span></span>
-              <p class="colorido-2">EMBALAGENS </p>
-              <h3>PARA PRESENTES</h3>
-              <p>Contamos com uma extensa linha de etiquetas, laços para presentes e embalagens com estampas modernas e opções variadas de formatos.</p>
-              <a href="#">LINHA INFANTIL</a>
+
+
+      <div class="presentes-secao-menu">
+        <div class="container">
+
+          <div class="presentes-secao-menu__caixa">
+            <div class="menu-presentes">
+              <div class="menu-presentes-form">
+                <form action="form-control">
+                  <label for="buscaPalavra" class="">Busque por palavra</label>
+                  <input type="busca" class="form-control-busca" id="buscaPalavra" placeholder="ex. metalizado">
+
+                  <label for="linhaProdutos">Tipo de produto</label>
+                  <select class="form-control-select" id="linhaProdutos">
+                    <option>Linha infantil</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+
+                  <label for="codigoProduto">Código</label>
+                  <input type="codigo" class="form-control" id="codigoProduto" placeholder="104">
+
+                  <label for="medidas">Medidas</label>
+                  <select class="form-control-select" id="medidas">
+                    <option>selecione a medida</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                  <label for="cores">Cores</label>
+                  <select class="form-control" id="cores">
+                    <option>escolha a cor</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+
+                  <button class="form-control__buscar">Buscar</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="presentes-secao-menu__caixa2">
+              <div class="presentes-secao-menu__conteudo">
+                <div class="presentes-secao-menu__conteudo-img"><img src="imagens/ChicEmbalagens_catalogoEBOOK-min.jpg" alt="Embalagens de presente"></div>
+                <div class="presentes-secao-menu__conteudo-texto">
+                  <span>home > embalagens para presentes > <span class="colorido">linha infantil</span></span>
+                  <p class="colorido-2">EMBALAGENS </p>
+                  <h3>PARA PRESENTES</h3>
+                  <p>Contamos com uma extensa linha de etiquetas, laços para presentes e embalagens com estampas modernas e opções variadas de formatos.</p>
+                  <a href="#">LINHA INFANTIL</a>
+                </div>
+              </div>
+
+              <div class="presentes-secao__produtos">
+
+                <div class="presentes-secao__produtos-item">
+                  <ul>
+                    <li>
+                      <img src="imagens/Grupo 51-min.jpg" alt="foto produto">
+
+                      <div class="presentes-secao__produtos-texto-presentes">
+                        <h3>Alegria</h3>
+                        <p class="color2">Disponvel nas medidas:</p>
+                        <div class="presentes-secao__produtos-medidas">
+                          <span>10x14</span>
+                          <span>15x22</span>
+                          <span>20x29</span>
+                          <span>25x37</span>
+                          <span>30x44</span>
+                          <span>35x59</span>
+                          <span>45x59</span>
+                        </div>
+                        <p class="color3"><i class="fas fa-circle"></i>Perolado</p>
+                        <a class="color4" href=""><i class="fab fa-whatsapp"></i>Falar com vendedor</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="presentes-secao__produtos-item">
+                  <ul>
+                    <li>
+                      <img src="imagens/Grupo 51-min.jpg" alt="foto produto">
+
+                      <div class="presentes-secao__produtos-texto-presentes">
+                        <h3>Alegria</h3>
+                        <p class="color2">Disponvel nas medidas:</p>
+                        <div class="presentes-secao__produtos-medidas">
+                          <span>10x14</span>
+                          <span>15x22</span>
+                          <span>20x29</span>
+                          <span>25x37</span>
+                          <span>30x44</span>
+                          <span>35x59</span>
+                          <span>45x59</span>
+                        </div>
+                        <p class="color3"><i class="fas fa-circle"></i>Perolado</p>
+                        <a class="color4" href=""><i class="fab fa-whatsapp"></i>Falar com vendedor</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="presentes-secao__produtos-item">
+                  <ul>
+                    <li>
+                      <img src="imagens/Grupo 51-min.jpg" alt="foto produto">
+
+                      <div class="presentes-secao__produtos-texto-presentes">
+                        <h3>Alegria</h3>
+                        <p class="color2">Disponvel nas medidas:</p>
+                        <div class="presentes-secao__produtos-medidas">
+                          <span>10x14</span>
+                          <span>15x22</span>
+                          <span>20x29</span>
+                          <span>25x37</span>
+                          <span>30x44</span>
+                          <span>35x59</span>
+                          <span>45x59</span>
+                        </div>
+                        <p class="color3"><i class="fas fa-circle"></i>Perolado</p>
+                        <a class="color4" href=""><i class="fab fa-whatsapp"></i>Falar com vendedor</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="presentes-secao__produtos-item">
+                  <ul>
+                    <li>
+                      <img src="imagens/Grupo 51-min.jpg" alt="foto produto">
+
+                      <div class="presentes-secao__produtos-texto-presentes">
+                        <h3>Alegria</h3>
+                        <p class="color2">Disponvel nas medidas:</p>
+                        <div class="presentes-secao__produtos-medidas">
+                          <span>10x14</span>
+                          <span>15x22</span>
+                          <span>20x29</span>
+                          <span>25x37</span>
+                          <span>30x44</span>
+                          <span>35x59</span>
+                          <span>45x59</span>
+                        </div>
+                        <p class="color3"><i class="fas fa-circle"></i>Perolado</p>
+                        <a class="color4" href=""><i class="fab fa-whatsapp"></i>Falar com vendedor</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="presentes-secao__produtos-item">
+                  <ul>
+                    <li>
+                      <img src="imagens/Grupo 51-min.jpg" alt="foto produto">
+
+                      <div class="presentes-secao__produtos-texto-presentes">
+                        <h3>Alegria</h3>
+                        <p class="color2">Disponvel nas medidas:</p>
+                        <div class="presentes-secao__produtos-medidas">
+                          <span>10x14</span>
+                          <span>15x22</span>
+                          <span>20x29</span>
+                          <span>25x37</span>
+                          <span>30x44</span>
+                          <span>35x59</span>
+                          <span>45x59</span>
+                        </div>
+                        <p class="color3"><i class="fas fa-circle"></i>Perolado</p>
+                        <a class="color4" href=""><i class="fab fa-whatsapp"></i>Falar com vendedor</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="presentes-secao__produtos-item">
+                  <ul>
+                    <li>
+                      <img src="imagens/Grupo 51-min.jpg" alt="foto produto">
+
+                      <div class="presentes-secao__produtos-texto-presentes">
+                        <h3>Alegria</h3>
+                        <p class="color2">Disponvel nas medidas:</p>
+                        <div class="presentes-secao__produtos-medidas">
+                          <span>10x14</span>
+                          <span>15x22</span>
+                          <span>20x29</span>
+                          <span>25x37</span>
+                          <span>30x44</span>
+                          <span>35x59</span>
+                          <span>45x59</span>
+                        </div>
+                        <p class="color3"><i class="fas fa-circle"></i>Perolado</p>
+                        <a class="color4" href=""><i class="fab fa-whatsapp"></i>Falar com vendedor</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="presentes-secao__produtos-item">
+                  <ul>
+                    <li>
+                      <img src="imagens/Grupo 51-min.jpg" alt="foto produto">
+
+                      <div class="presentes-secao__produtos-texto-presentes">
+                        <h3>Alegria</h3>
+                        <p class="color2">Disponvel nas medidas:</p>
+                        <div class="presentes-secao__produtos-medidas">
+                          <span>10x14</span>
+                          <span>15x22</span>
+                          <span>20x29</span>
+                          <span>25x37</span>
+                          <span>30x44</span>
+                          <span>35x59</span>
+                          <span>45x59</span>
+                        </div>
+                        <p class="color3"><i class="fas fa-circle"></i>Perolado</p>
+                        <a class="color4" href=""><i class="fab fa-whatsapp"></i>Falar com vendedor</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="presentes-secao__produtos-item">
+                  <ul>
+                    <li>
+                      <img src="imagens/Grupo 51-min.jpg" alt="foto produto">
+
+                      <div class="presentes-secao__produtos-texto-presentes">
+                        <h3>Alegria</h3>
+                        <p class="color2">Disponvel nas medidas:</p>
+                        <div class="presentes-secao__produtos-medidas">
+                          <span>10x14</span>
+                          <span>15x22</span>
+                          <span>20x29</span>
+                          <span>25x37</span>
+                          <span>30x44</span>
+                          <span>35x59</span>
+                          <span>45x59</span>
+                        </div>
+                        <p class="color3"><i class="fas fa-circle"></i>Perolado</p>
+                        <a class="color4" href=""><i class="fab fa-whatsapp"></i>Falar com vendedor</a>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+
             </div>
           </div>
         </div>
       </div>
+      </div>
     </section>
     <!--fim do banner principal-->
 
-    <section class="produtos-venda">
-      <div class="container">
-        <div class="produtos-venda__item">
-          <ul class="produtos-venda__box">
-            <li class="produtos-venda__box-item">
 
-              <a href=""> <img src="imagens//images/Icon awesome-whatsapp.jpg" alt="Whatsapp">Falar com vendedor</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
 
 
 
