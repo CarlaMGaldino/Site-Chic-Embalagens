@@ -125,8 +125,16 @@ $black-seven: #343434;
   text-align: center;
   color: #fff;
   text-transform: uppercase;
-  transition: 1.5em;
   @include breakpoint(small-only) {
     font-size: 14px;
+  }
+}
+
+@mixin button-page-hover {
+  background: $secondary-color;
+  font-size: 24px;
+  transition: 0, 5s;
+  @include breakpoint(small-only) {
+    font-size: 15px;
   }
 }
