@@ -1,0 +1,159 @@
+@import "mixins";
+@import "breakpoint";
+
+$primary-color: #c40f14;
+$secondary-color: #df191e;
+$tertiary-color: #b4b4b4;
+$fourth-color: #00000029;
+$black-one: #333333;
+$black-two: #151515;
+$black-three: #292929;
+$black-four: #1d1d1d;
+$black-five: #484848;
+$black-six: #363636;
+$black-seven: #343434;
+
+.banner-principal__presentes {
+  background-image: url(/imagens/topo-presentes2-chic-embalagens-min.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 465px;
+}
+
+.banner-principal__presentes-img-texto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.banner-principal__presentes-img-texto h2 {
+  text-align: center;
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 1.5em;
+  color: $black-one;
+  text-transform: uppercase;
+}
+
+/*seção 2 presentes*/
+
+.presentes-secao-menu {
+  margin-top: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+section.presentes {
+  height: 413px;
+  background: #fff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  margin-bottom: -100px;
+}
+
+.div-menu-presentes {
+  width: 30%;
+  height: 592px;
+  border-radius: 5px;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  margin-top: 89px;
+}
+
+.div.presentes-secao-menu__conteudo {
+  display: flex;
+  margin-left: 100px;
+  width: 100%;
+  height: 269px;
+  margin-top: 89px;
+}
+
+.presentes-secao-menu__conteudo-texto span {
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 12px;
+  text-align: left;
+  color: #333333;
+  padding-left: 15px;
+}
+
+.presentes-secao-menu__conteudo-texto span.colorido {
+  color: $primary-color;
+}
+
+.presentes-secao-menu__conteudo-texto .colorido-2 {
+  @include sub-title;
+  color: $primary-color;
+  text-align: left;
+  padding: 10px 15px;
+  margin-bottom: -34px;
+}
+
+.presentes-secao-menu__conteudo-texto h3 {
+  @include paragrafo-span-2;
+  font-weight: 300;
+  color: $black-two;
+  padding: 10px 15px;
+}
+
+.presentes-secao-menu__conteudo-texto p {
+  @include paragrafo_menu;
+  color: $black-one;
+  text-align: left;
+  font-size: 15px;
+  padding: 10px 15px;
+}
+
+.presentes-secao-menu__conteudo-texto a {
+  background-color: #ef71b0;
+  color: #fff;
+  @include sub-title;
+  font-size: 18px;
+  text-align: left;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.presentes-secao-menu__conteudo-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+p.colorido-2 {
+  padding: 15px 0px;
+}
+
+.presentes-secao-menu__conteudo-img {
+  position: relative;
+}
+
+.presentes-secao-menu__conteudo-img:after {
+  position: absolute;
+  content: "";
+  width: 159px;
+  height: 145px;
+  background: transparent;
+  border: 2px solid #c6121d;
+  left: -41px;
+  top: 157px;
+}
+
+.presentes-secao-menu__conteudo-img img {
+  position: relative;
+  z-index: 2;
+}
+/*seção produtos venda*/
+
+.produtos-venda {
+  background-image: url(/imagens/images-normal/pattern-presentes.jpg);
+  background-repeat: repeat;
+  width: 100%;
+  height: 800px;
+  position: relative;
+  z-index: -1;
+}
