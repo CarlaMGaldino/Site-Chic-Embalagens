@@ -1,0 +1,9 @@
+Campos personalizados -> 
+
+Imagem embalagem
+Cor embalagem
+
+Taxonomias ->
+
+Medidas
+Tipo

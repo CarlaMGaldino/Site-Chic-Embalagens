@@ -12,6 +12,10 @@ $black-four: #1d1d1d;
 $black-five: #000000ea;
 $black-six: #363636;
 
+nav.menu-menu-principal-container {
+  width: 950px;
+}
+
 .header-navegacao__menu {
   position: relative;
   top: 0;
@@ -72,7 +76,7 @@ $black-six: #363636;
 
 .menu-scroll__li .trabalhe:before {
   content: "";
-  background-image: url(/imagens/icone-trabalhe-conosco.svg);
+  background-image: url(../imagens/icone-trabalhe-conosco.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -89,7 +93,7 @@ $black-six: #363636;
 
 .menu-scroll__li .contato:before {
   content: "";
-  background-image: url(/imagens/icone-contato.svg);
+  background-image: url(../imagens/icone-contato.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -101,10 +105,11 @@ $black-six: #363636;
 
 a.trabalhe {
   display: flex;
+  color: #151515;
 }
 .ancora-principal .trabalhe:before {
   content: "";
-  background-image: url(/imagens/icone-trabalhe-conosco.svg);
+  background-image: url(../imagens/icone-trabalhe-conosco.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -116,11 +121,12 @@ a.trabalhe {
 .ancora-principal .contato {
   display: flex;
   align-items: center;
+  color: #151515;
 }
 
 .ancora-principal .contato:before {
   content: "";
-  background-image: url(/imagens/icone-contato.svg);
+  background-image: url(../imagens/icone-contato.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -141,12 +147,16 @@ nav.menu-nav-header {
     & a {
       @include paragrafo_menu;
       &:hover {
-        color: $primary-color;
-        text-decoration: underline;
-        transition: 0.3s;
+        font-weight: 700;
+        letter-spacing: -0.03em;
       }
     }
   }
+}
+
+nav.menu-nav-header ul .current-menu-item a {
+  font-weight: 700;
+  letter-spacing: -0.03em;
 }
 
 nav.menu-nav-header {
@@ -167,8 +177,8 @@ nav.menu-nav-header {
 
 .menu-mobile__scroll {
   background-color: $black-two;
-  width: 25px;
-  height: 2px;
+  width: 30px;
+  height: 3px;
   margin-right: 0px;
   position: relative;
   &::after {
@@ -176,18 +186,18 @@ nav.menu-nav-header {
     display: block;
     background-color: $black-two;
     position: absolute;
-    width: 25px;
-    height: 2px;
-    bottom: 6px;
+    width: 30px;
+    height: 3px;
+    bottom: 7px;
   }
   &::before {
     content: "";
     display: block;
     background-color: $black-two;
     position: absolute;
-    width: 25px;
-    height: 2px;
-    top: 6px;
+    width: 30px;
+    height: 3px;
+    top: 7px;
   }
   &.menu-ativo {
     transform: rotate(135deg);
@@ -239,25 +249,41 @@ nav.menu-nav-header {
   &__ul {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-between;
     @include breakpoint(medium-only) {
       flex-flow: column;
     }
   }
   &__li {
     margin-left: 20px;
+    padding: 0 10px;
+    @include breakpoint(large-only) {
+      margin-left: 0px;
+    }
     @include breakpoint(medium-only) {
       margin-bottom: 20px;
     }
     & a {
       @include paragrafo_menu;
+      font-size: 14px;
       color: #fff;
       &:hover {
-        color: $primary-color;
-        text-decoration: underline;
-        transition: 0.3s;
+        font-weight: 700;
+        letter-spacing: -0.03em;
       }
     }
   }
+}
+
+@media only screen and (max-width: 1600px) {
+  .menu-scroll__li a {
+    font-size: 12px;
+  }
+}
+
+.current-menu-item.current_page_item a {
+  font-weight: 700;
+  letter-spacing: -0.03em;
 }
 
 .menu-scroll.scroll-ativo {
@@ -289,10 +315,67 @@ a#menu-mobile__toggle {
   }
 }
 
+li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-57.menu-scroll__li a,
+li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-58.menu-scroll__li a {
+  display: flex;
+  align-items: center;
+}
+
+li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-57.menu-scroll__li a::before,
+li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-58.menu-scroll__li a::before {
+  content: "";
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 14px;
+  height: 17px;
+  margin-right: 7px;
+  @include breakpoint(medium-up) {
+    display: none;
+  }
+}
+
+li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-57.menu-scroll__li a::before {
+  background-image: url(../imagens/icone-contato.svg);
+}
+
+li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-58.menu-scroll__li a::before {
+  background-image: url(../imagens/icone-trabalhe-conosco.svg);
+}
+
 @media only screen and (min-width: 769px) and (max-width: 1000px) {
   .menu-scroll__li a {
     font-size: 14px;
   }
+}
+
+li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-57.menu-scroll__li,
+li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-58.menu-scroll__li {
+  @include breakpoint(medium-up) {
+    display: block;
+  }
+  @include breakpoint(medium-only) {
+    display: block;
+  }
+}
+
+.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-57,
+.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-58 {
+  @include breakpoint(medium-up) {
+    display: none;
+  }
+  @include breakpoint(medium-only) {
+    display: block;
+  }
+}
+
+body.page-template.page-template-page-trabalhe-conosco.page-template-page-trabalhe-conosco-php.page.page-id-15.logged-in a.trabalhe {
+  font-weight: 700;
+}
+
+body.page-template.page-template-page-contato.page-template-page-contato-php.page.page-id-23.logged-in a.contato {
+  letter-spacing: -0.03em;
 }
 
 @media only screen and (max-width: 1076px) {
@@ -306,4 +389,79 @@ a#menu-mobile__toggle {
 
 section.sobre-empresa__principal {
   overflow: hidden;
+}
+
+ul#menu-menu-principal .menu-item-65,
+ul#menu-menu-principal .menu-item-66 {
+  display: none;
+}
+
+.menu-scroll .ancora-principal .trabalhe,
+.menu-scroll .ancora-principal .contato {
+  display: none;
+}
+
+.menu-scroll__navegacao--menu-principal {
+  display: flex;
+  @include breakpoint(medium-only) {
+    justify-content: flex-end;
+  }
+}
+
+li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-65.menu-scroll__li,
+li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-66.menu-scroll__li {
+  display: none;
+}
+
+nav.menu-scroll__nav {
+  width: 100%;
+}
+
+@media only screen and (min-width: 941px) and (max-width: 1350px) {
+  .menu-scroll__navegacao--menu-principal {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  // .menu-scroll__ul {
+  //   display: flex;
+  //   width: 1366px;
+  //   flex-flow: row nowrap;
+  // }
+}
+
+.menu-scroll__conteudo.row {
+  flex-wrap: nowrap;
+}
+
+.menu-scroll__logo-chic {
+  @include breakpoint(medium-only) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1372px) {
+  .menu-scroll__li a {
+    font-size: 12px;
+  }
+}
+
+.menu-scroll__navegacao--menu-principal {
+  width: 100%;
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1099px) {
+  .menu-scroll__li a {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (min-width: 1078px) and (max-width: 1136px) {
+  .logo-chic img {
+    width: 80px;
+    height: 78px;
+  }
 }

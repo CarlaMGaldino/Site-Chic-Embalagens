@@ -451,3 +451,25 @@ section.page-empresa {
     width: 100%;
   }
 }
+
+.page-empresa-conteudo-box3 {
+  @include breakpoint(super-small-only) {
+    margin-bottom: 100px;
+  }
+}
+
+section.page-empresa {
+  @include breakpoint(super-small-only) {
+    margin: 0px 0px 0px 0px;
+  }
+}
+
+.span-vermelho {
+  color: $secondary-color;
+}
+
+.page-empresa-conteudo4 p {
+  @include breakpoint(super-large-up) {
+    width: 90%;
+  }
+}

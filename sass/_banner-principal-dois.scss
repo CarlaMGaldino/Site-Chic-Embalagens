@@ -13,19 +13,24 @@ $black-six: #363636;
 $black-seven: #343434;
 
 .banner-principal__empresa {
-  background-image: url(/imagens/fundo-paralax-chic-embalgaens-2-min.png);
+  background-image: url(../imagens/fundo-paralax-chic-embalgaens-2-min.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: calc(100vh - 107px);
   background-attachment: fixed;
-  background-color: #ffffffb8;
+  background-color: #ffffff45;
   background-blend-mode: color;
   height: 492px;
   display: flex;
   justify-content: center;
   align-items: center;
+  @include breakpoint(small-only) {
+    height: 245px;
+    margin-top: 60px;
+    background-attachment: initial;
+  }
 }
 
 .banner-principal__empresa-img-texto h2 {
@@ -36,7 +41,7 @@ $black-seven: #343434;
 
 .banner-principal__empresa-img-texto h2:before {
   content: "";
-  background-image: url(/imagens/seta.png);
+  background-image: url(../imagens/seta.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -50,4 +55,10 @@ $black-seven: #343434;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+}
+
+.banner-principal__img6-texto.banner-principal__img-texto p {
+  @include breakpoint(super-small-only) {
+    width: 90%;
+  }
 }

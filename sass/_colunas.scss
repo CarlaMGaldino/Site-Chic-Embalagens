@@ -8,5 +8,7 @@ $grid__cols: 12;
 @for $i from 1 through $grid__cols {
   .col-#{$i} {
     flex-basis: (100 / ($grid__cols / $i)) * 1%;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }

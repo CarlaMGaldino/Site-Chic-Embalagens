@@ -1,8 +1,6 @@
 @import "mixins";
 
-
 @import "breakpoint";
-
 
 $primary-color: #c40f14;
 $secondary-color: #df191e;
@@ -15,7 +13,6 @@ $black-four: #1d1d1d;
 $black-five: #838383;
 $black-six: #363636;
 $black-seven: #343434;
-
 
 .banner-principal__img-texto {
   display: flex;
@@ -43,18 +40,18 @@ $black-seven: #343434;
     margin-top: 0px !important;
     font-size: 23px !important;
   }
-
 }
 
 .banner-principal__img1 {
-  background-image: url(/imagens/banner-embalagem-cafe-chic3-min.png);
+  background-image: url(../imagens/banners/banner-embalagem-cafe-chic3-min-min.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: calc(100vh - 107px);
-
-  
+  @include breakpoint(super-large) {
+    height: calc(100vh - 150px);
+  }
   @include breakpoint(medium-only) {
     height: calc(100vh - 60px);
   }
@@ -90,30 +87,30 @@ $black-seven: #343434;
     width: 100%;
     padding: 6px 0 !important;
   }
-
 }
 
-.banner-principal__img1 a:hover {
-  background-color: $black-two;
-  @include button-page;
+.banner-principal__link:hover {
+  @include button-page-hover;
 }
 
 .banner-principal__img2 {
-  background-image: url(/imagens/banner-embalagem-cafe-chic4-min.png);
+  background-image: url(../imagens/banners/banner-embalagem-cafe-chic4-min-min.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: calc(100vh - 107px);
-
+  @include breakpoint(super-large) {
+    height: calc(100vh - 150px);
+  }
   @include breakpoint(medium-only) {
     height: calc(100vh - 60px);
   }
   @include breakpoint(small-only) {
     background-color: rgba(0, 0, 0, 0.555);
     background-blend-mode: multiply;
+    background-position-x: 78%;
   }
-
 }
 
 .banner-principal__img2-texto.col-6 {
@@ -132,32 +129,34 @@ $black-seven: #343434;
     color: #fff;
     margin-top: 0px;
   }
-
 }
 
 .banner-principal__img2 a {
   background-color: $primary-color;
   padding: 6px 15px;
   @include button-page;
+  font-size: 22px;
   max-width: 368px;
   margin-top: 36px;
 }
 
 .banner-principal__img2 a:hover {
-  background-color: $black-two;
   padding: 6px 15px;
-  @include button-page;
+  @include button-page-hover;
+  font-size: 23px;
   margin-top: 36px;
 }
 
 .banner-principal__img3 {
-  background-image: url(/imagens/banner-embalagem-cafe-chic6-min.png);
+  background-image: url(../imagens/banners/banner-embalagem-cafe-chic6-min-min.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: calc(100vh - 107px);
-
+  @include breakpoint(super-large) {
+    height: calc(100vh - 150px);
+  }
   @include breakpoint(medium-only) {
     height: calc(100vh - 60px);
   }
@@ -165,7 +164,6 @@ $black-seven: #343434;
     background-color: rgba(0, 0, 0, 0.555);
     background-blend-mode: multiply;
   }
-
 }
 
 .banner-principal__img3-texto.col-6 {
@@ -181,7 +179,6 @@ $black-seven: #343434;
   margin-top: 159px;
 
   text-transform: uppercase;
-
 }
 
 .banner-principal__img3 a {
@@ -193,20 +190,21 @@ $black-seven: #343434;
 }
 
 .banner-principal__img3 a:hover {
-  background-color: $black-two;
   padding: 6px 15px;
-  @include button-page;
+  @include button-page-hover;
   margin-top: 36px;
 }
 
 .banner-principal__img4 {
-  background-image: url(/imagens/banner-embalagem-cafe-chic7-min.png);
+  background-image: url(../imagens/banners/banner-embalagem-cafe-chic7-min-min.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: calc(100vh - 107px);
-
+  @include breakpoint(super-large) {
+    height: calc(100vh - 150px);
+  }
   @include breakpoint(medium-only) {
     height: calc(100vh - 60px);
   }
@@ -214,7 +212,6 @@ $black-seven: #343434;
     background-color: rgba(0, 0, 0, 0.555);
     background-blend-mode: multiply;
   }
-
 }
 
 .banner-principal__img4 h2 {
@@ -232,20 +229,21 @@ $black-seven: #343434;
 }
 
 .banner-principal__img4 a:hover {
-  background-color: $black-two;
   padding: 6px 15px;
-  @include button-page;
+  @include button-page-hover;
   margin-top: 36px;
 }
 
 .banner-principal__img5 {
-  background-image: url(/imagens/banner-embalagem-cafe-chic8-min.png);
+  background-image: url(../imagens/banners/banner-embalagem-cafe-chic8-min-min.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: calc(100vh - 107px);
-
+  @include breakpoint(super-large) {
+    height: calc(100vh - 150px);
+  }
   @include breakpoint(medium-only) {
     height: calc(100vh - 60px);
   }
@@ -253,7 +251,6 @@ $black-seven: #343434;
     background-color: rgba(0, 0, 0, 0.555);
     background-blend-mode: multiply;
   }
-
 }
 
 .banner-principal__img5-texto.col-6 {
@@ -272,37 +269,39 @@ $black-seven: #343434;
   display: flex;
   flex-direction: column;
 
-
   padding: 60px 50px;
   @include breakpoint(small-only) {
     background-color: transparent;
   }
-
 }
 
 .banner-principal__img5 a {
   background-color: $primary-color;
   padding: 6px 15px;
   @include button-page;
+  font-size: 22px;
   max-width: 368px;
   margin-top: 36px;
 }
 
 .banner-principal__img5 a:hover {
-  background-color: $black-two;
   padding: 6px 15px;
-  @include button-page;
+  @include button-page-hover;
+
+  font-size: 23px;
   margin-top: 36px;
 }
 
 .banner-principal__img6 {
-  background-image: url(/imagens/banner-embalagem-premios-chic.png);
+  background-image: url(../imagens/banners/banner-embalagem-premios-chic-min.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: calc(100vh - 107px);
-
+  @include breakpoint(super-large) {
+    height: calc(100vh - 150px);
+  }
   @include breakpoint(medium-only) {
     height: calc(100vh - 60px);
   }
@@ -323,9 +322,7 @@ $black-seven: #343434;
   @include title-red;
   color: $primary-color;
 
-
   margin-bottom: 10px;
-
 }
 
 .banner-principal__img6 p {
@@ -346,14 +343,12 @@ $black-seven: #343434;
     color: #fff;
     font-size: 16px;
   }
-
 }
 
 button.slick-next.slick-arrow,
 button.slick-prev.slick-arrow {
   display: none !important;
 }
-
 
 .banner-principal__img--conteudo {
   display: flex;
@@ -460,4 +455,3 @@ button.slick-prev.slick-arrow {
     margin-top: 0;
   }
 }
-

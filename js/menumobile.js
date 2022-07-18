@@ -20,8 +20,10 @@ $(document).ready(function () {
   $(window).scroll(function () {
     if ($(document).scrollTop() > 300) {
       $("#contato-fixo__opacity").addClass("opacity-ativo");
+      $("#scroll-to-top").addClass("opacity-ativo");
     } else {
       $("#contato-fixo__opacity").removeClass("opacity-ativo");
+      $("#scroll-to-top").removeClass("opacity-ativo");
     }
   });
 });

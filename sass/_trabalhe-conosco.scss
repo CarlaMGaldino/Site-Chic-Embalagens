@@ -1,0 +1,118 @@
+@import "mixins";
+@import "breakpoint";
+
+$primary-color: #c40f14;
+$secondary-color: #df191e;
+$tertiary-color: #b4b4b4;
+$fourth-color: #00000029;
+$black-one: #333333;
+$black-two: #151515;
+$black-three: #292929;
+$black-four: #1d1d1d;
+$black-five: #000000ea;
+$black-six: #363636;
+
+.form-trabalhe .form-contato__telefone {
+  width: 25%;
+}
+
+.form-trabalhe .form-contato__email {
+  width: 25%;
+}
+
+.form-trabalhe .form-contato__nome {
+  width: 40%;
+}
+
+.form-trabalhe .form-contato__cargo-desejado {
+  width: 40%;
+}
+
+.form-trabalhe input:not([type="checkbox"]),
+input:not([type="radio"]) {
+  width: 100%;
+}
+
+p.form-trabalhe__curriculo-item-color1 {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 38px;
+  text-align: left;
+  color: #164e88;
+
+  margin-bottom: 15px;
+}
+
+input.wpcf7-form-control.wpcf7-file.wpcf7-validates-as-required {
+  width: 50%;
+  @include breakpoint(small-only) {
+    width: 100%;
+    font-size: 12px;
+  }
+}
+
+p.form-trabalhe__curriculo-item-color2 {
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 24px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: #c2c2c2;
+  margin: 25px 0px;
+}
+
+.form-trabalhe label {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 38px;
+  text-align: left;
+  color: #585858;
+}
+
+.form-trabalhe span {
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 37px;
+  text-align: left;
+  color: rgb(255, 0, 0);
+}
+
+input[type="checkbox"] {
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: left;
+  color: #333 !important;
+  margin-left: -21px;
+}
+
+@media screen and (max-width: 940px) {
+  .form-trabalhe .form-contato__nome {
+    width: 100%;
+  }
+
+  .form-trabalhe .form-contato__email {
+    width: 100%;
+  }
+  .form-trabalhe .form-contato__telefone {
+    width: 100%;
+  }
+  .form-trabalhe .form-contato__cargo-desejado {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  p.form-trabalhe__curriculo-item-color2 {
+    font-size: 16px;
+  }
+}
+
+.form-trabalhe input,
+.form-trabalhe textarea {
+  color: $black-two;
+}

@@ -24,6 +24,7 @@ $black-seven: #343434;
 }
 
 .embalagens-personalizadas-img__span {
+  font-size: 30px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -101,4 +102,70 @@ $black-seven: #343434;
   .embalagens-personalizadas-img {
     width: 50%;
   }
+}
+
+.embalagens {
+  display: block;
+  @include breakpoint(medium-only) {
+    display: none;
+  }
+}
+
+.embalagens.embalagens-slide {
+  display: none;
+  @include breakpoint(medium-only) {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 770px) {
+  .page-empresa-conteudo-box1.pag-empresa.pag-embalagens {
+    margin-bottom: 0;
+  }
+}
+
+#embalagens-slide button.slick-next.slick-arrow,
+#embalagens-slide button.slick-prev.slick-arrow {
+  display: block !important;
+}
+
+div#embalagens-slide button.slick-prev.slick-arrow {
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  z-index: 1;
+  background: transparent;
+  width: 30px;
+  height: 100%;
+  border: 0;
+  font-size: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='chevron-left' class='svg-inline--fa fa-chevron-left fa-w-10' role='img' viewBox='0 0 320 512'%3E%3Cpath fill='%23fff' d='M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  padding: 20px;
+}
+
+div#embalagens-slide button.slick-next.slick-arrow {
+  position: absolute;
+  /* top: 50%; */
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+  background: transparent;
+  height: 100%;
+  right: 0;
+  font-size: 0;
+  width: 30px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='chevron-left' class='svg-inline--fa fa-chevron-left fa-w-10' role='img' viewBox='0 0 320 512'%3E%3Cpath fill='%23fff' d='M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  padding: 20px;
+  border: 0;
+  transform: rotate(181deg);
+}
+
+.presentes-secao__produtos-item--tipo {
+  margin-top: 10px;
 }

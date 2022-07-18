@@ -16,7 +16,8 @@
 @import "area-comercial";
 @import "qualidade";
 @import "producao";
-
+@import "presentes";
+@import "trabalhe-conosco";
 html {
   scroll-behavior: smooth;
 }
@@ -43,16 +44,20 @@ $black-six: #363636;
 .container {
   max-width: 1340px;
   margin: 0 auto;
-  padding: 0px 10px !important;
+  padding: 0px 30px !important;
   @include breakpoint(super-large-up) {
     max-width: 1500px;
-    padding: 0px 10px !important;
+    padding: 0px 20px !important;
   }
   @include breakpoint(large-only) {
     max-width: 1200px;
-    padding: 0px 10px !important;
+    padding: 0px 20px !important;
   }
   @include breakpoint(medium-only) {
+    max-width: 100%;
+    padding: 0px 20px !important;
+  }
+  @include breakpoint(small-only) {
     max-width: 100%;
     padding: 0px 10px !important;
   }
@@ -72,6 +77,10 @@ $black-six: #363636;
 
 .conteudo-hidden {
   overflow: hidden;
+}
+
+.display-none {
+  display: none !important;
 }
 
 .contato-fixo {
@@ -105,7 +114,7 @@ $black-six: #363636;
 }
 
 .icone-contato__fixo {
-  background-image: url(/imagens/icone-contato-branco.svg);
+  background-image: url(../imagens/icone-contato-branco.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;

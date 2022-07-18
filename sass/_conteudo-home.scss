@@ -19,17 +19,9 @@ section.sobre-empresa__principal {
   padding: 100px 0px;
 }
 
-.sobre-empresa__foto {
-  width: 45%;
-}
-
 .sobre-empresa__foto img {
   max-width: 100%;
   width: 748px;
-}
-
-.sobre-empresa__texto {
-  width: 45%;
 }
 
 .estilo-span-2 {
@@ -54,9 +46,21 @@ span.estilo-fonte {
 }
 
 .sobre-empresa__texto a:hover {
-  @include button-page;
-  background-color: $black-two;
+  @include button-page-hover;
   padding: 5px 10px;
+}
+
+.sobre-empresa__texto .link-texto__embalagens {
+  @include paragrafo-texto;
+  font-size: 20px;
+  text-transform: initial;
+  background-color: transparent;
+}
+
+.sobre-empresa__texto .link-texto__embalagens:hover {
+  @include paragrafo-texto;
+  text-transform: initial;
+  background-color: transparent;
 }
 
 .sobre-empresa {
@@ -71,6 +75,7 @@ span.estilo-fonte {
 .sobre-empresa__texto p {
   margin-bottom: 30px;
   @include paragrafo-texto;
+  background-color: #fff;
 }
 
 .sobre-empresa {
@@ -88,7 +93,7 @@ span.estilo-fonte {
   background: transparent;
   border: 1px solid #a7a7a7;
   left: 409px;
-  top: -38px;
+  top: -71px;
   z-index: -1;
 }
 
@@ -97,6 +102,12 @@ span.estilo-fonte {
 section.embalagens-home {
   padding: 100px 0px 100px 0px;
   overflow: hidden;
+  @include breakpoint(medium-up) {
+    padding: 0px 0px 50px 0px;
+  }
+  @include breakpoint(super-large-up) {
+    padding: 100px 0px 100px 0px;
+  }
 }
 
 .embalagens-home__img-bobinas img {
@@ -110,27 +121,107 @@ section.embalagens-home {
 .embalagens-home__embalagens {
   display: flex;
   justify-content: space-between;
-}
+  &-box {
+    width: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 700px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    @include breakpoint(large-only) {
+      height: 600px;
+    }
+    @include breakpoint(medium-only) {
+      height: 700px;
+      width: 100%;
+      margin-bottom: 60px;
+    }
+    @include breakpoint(small-only) {
+      height: 440px;
+    }
 
-/*.embalagens-home__embalagens-bobinas {
-  background-image: url(/imagens/images/fundo-embalagem-industrial-min.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 40%;
-  height: 550px;
-  position: relative;
-}
+    &--link {
+      display: flex;
+      justify-content: center;
+      & a {
+        @include sub-title;
+        background-color: $primary-color;
+        color: #fff;
+        width: 180px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        &:hover {
+          @include button-page-hover;
+        }
+        @include breakpoint(super-small-only) {
+          opacity: 1;
+        }
+      }
+    }
+    &:hover .embalagens-home__embalagens-box--link a {
+      opacity: 1;
+      transition: 0.5s ease;
+    }
+  }
+  &-imagem {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    @include breakpoint(large-only) {
+      height: calc(100% - 172px);
+    }
+    @include breakpoint(small-only) {
+      height: calc(100% - 172px);
+    }
+    @include breakpoint(super-small-only) {
+      height: calc(100% - 115px);
+    }
+    &--h3 {
+      @include sub-title;
+      line-height: 1.5em;
+      text-align: center;
+      color: #fff;
+      padding-top: 60px;
+      &_span {
+        @include title;
+        text-align: center;
+        color: #fff;
+      }
+    }
+    &--img {
+      display: flex;
+      justify-content: center;
+      margin-top: 52px;
+      & img {
+        width: 100%;
+      }
+    }
+  }
 
-.embalagens-home__embalagens-presentes {
-  background-image: url(/imagens/images/fundo-embalagem-presente-min.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 40%;
-  height: 550px;
-  position: relative;
-}*/
+  &-imagem--1 {
+    background-image: url(../imagens/images/fundo-embalagem-industrial-min.jpg);
+    transition: 0.3s ease;
+    &:hover {
+      background-image: url(../imagens/images/fundo-embalagem-industrial-min.jpg), radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 51.56%, rgba(0, 0, 0, 0.68) 100%);
+      background-blend-mode: multiply;
+      transition: 0.3s ease;
+    }
+  }
+  &-imagem--2 {
+    background-image: url(../imagens/images/fundo-embalagem-presente-min.jpg);
+    transition: 0.3s ease;
+    &:hover {
+      background-image: url(../imagens/images/fundo-embalagem-presente-min.jpg), radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 51.56%, rgba(0, 0, 0, 0.68) 100%);
+      background-blend-mode: multiply;
+      transition: 0.3s ease;
+    }
+  }
+}
 
 .embalagens-home__ambalagens-presente img:after {
   content: "";
@@ -153,7 +244,7 @@ section.embalagens-home {
 /*Empresa*/
 
 section.Empresa {
-  background-image: url(/imagens/banner-missao-valores-min.jpg);
+  background-image: url(../imagens/banner-missao-valores-min.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -173,6 +264,7 @@ section.Empresa {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-self: flex-start;
   width: 28%;
   @include paragrafo-texto;
   text-align: center;
@@ -193,34 +285,67 @@ section.Empresa {
   @include paragrafo-span;
   color: $black-two;
   margin: 10px 0px;
+  text-transform: uppercase;
 }
 
-.empresa-dizeres__missao img {
-  width: 133.8px;
-  height: 126.48px;
-}
+// .empresa-dizeres__missao img {
+//   width: 133.8px;
+//   height: 126.48px;
+//   transform: translateX(26px);
+// }
 
-.empresa-dizeres__visao img {
-  width: 116.07px;
-  height: 116.07px;
-}
+// .empresa-dizeres__visao img {
+//   width: 116.07px;
+//   height: 116.07px;
+// }
 
-.empresa-dizeres__valores img {
-  width: 107.9px;
-  height: 109.52px;
-}
+// .empresa-dizeres__valores img {
+//   width: 107.9px;
+//   height: 109.52px;
+// }
 
 /*Final Empresa*/
 
 /*qualidade*/
 
 section.Qualidade {
-  background-image: url(/imagens/banner-footer-min.jpg);
+  background-image: url(../imagens/banner-footer-min.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 100%;
   padding: 90px 0px;
+}
+
+.empresa-qualidade {
+  position: relative;
+}
+
+.empresa-qualidade::before {
+  content: "CHIC EMBALAGENS";
+  font-size: 70px;
+  font-weight: 900;
+  color: #fff;
+  width: 60px;
+  position: absolute;
+  transform: rotate(270deg);
+  bottom: 0;
+  -webkit-text-fill-color: #ffffff00;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  opacity: 0.4;
+}
+
+@media only screen and (min-width: 1344px) and (max-width: 1400px) {
+  .empresa-qualidade::before {
+    left: 30px;
+  }
+}
+
+@media only screen and (max-width: 1282px) {
+  .empresa-qualidade::before {
+    display: none;
+  }
 }
 
 .empresa-qualidade__conteudo {
@@ -232,6 +357,13 @@ section.Qualidade {
   flex-direction: column;
   justify-content: center;
   padding: 30px 30px;
+  margin: 0 auto;
+  @include breakpoint(super-large) {
+    max-width: 1000px;
+  }
+  @include breakpoint(super-small-only) {
+    height: auto;
+  }
 }
 
 .empresa-qualidade__conteudo span {
@@ -262,13 +394,18 @@ section.Qualidade {
   padding: 12px;
 }
 .empresa-qualidade__conteudo a:hover {
-  background-color: $black-two;
+  @include button-page-hover;
   padding: 12px;
 }
 
 /*media*/
 
 @media screen and (max-width: 768px) {
+  .sobre-empresa .col-6 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
   .empresa-dizeres {
     flex-direction: column;
     -ms-flex-pack: distribute;
@@ -295,7 +432,7 @@ section.Qualidade {
   }
 
   .empresa-qualidade__conteudo {
-    padding: 190px 10px;
+    padding: 40px 10px;
   }
   section.Qualidade {
     padding: 42px 0px;
@@ -315,7 +452,7 @@ section.Qualidade {
     margin: 37px 10px 14px 10px;
   }
   section.embalagens-home {
-    padding: 20px 0px 70px 0px;
+    padding: 20px 0px 300px 0px;
     margin-top: 30px;
   }
 
@@ -417,5 +554,31 @@ section.Qualidade {
   .sobre-empresa:after {
     left: 520px;
     top: -90px;
+  }
+}
+
+section.sobre-empresa__principal {
+  @include breakpoint(super-small-only) {
+    margin: 0px 0px 30px;
+    overflow: hidden;
+  }
+}
+
+.sobre-empresa__foto {
+  @include breakpoint(super-small-only) {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.embalagens-home.pb-sm-0 {
+  @include breakpoint(small-only) {
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 475px) and (max-width: 768px) {
+  .embalagens-home__embalagens-imagem--img img {
+    width: 50%;
   }
 }

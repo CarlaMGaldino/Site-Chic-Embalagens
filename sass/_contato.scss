@@ -19,8 +19,8 @@ section.page-contato {
 .page-contato__conteudo {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 5px 50px;
+  justify-content: left;
+  width: 100%;
 }
 
 .page-contato__conteudo .page-contato-vermelho {
@@ -45,4 +45,227 @@ section.page-contato {
   .page-contato__conteudo {
     padding: 0px;
   }
+}
+
+/*Formulário*/
+
+.form-contato__autorizo .autorizo-form {
+  display: flex;
+  justify-content: space-between;
+}
+.conteudo_form2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form-contato__autorizo input {
+  width: 26px !important;
+}
+
+.form-contato__autorizo label span {
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: left;
+  color: #333;
+}
+
+.form-contato__button input {
+  @include button-page;
+  width: 171px !important;
+  border: none !important;
+  font-size: 23px !important;
+  height: 50px;
+  border-radius: 8px;
+  margin-top: 50px;
+}
+
+.form-contato__button input:hover {
+  @include button-page-hover;
+  width: 132px;
+  border: none;
+  border-radius: 8px;
+  font-size: 24px !important;
+  color: #fff;
+}
+
+.form-contato textarea {
+  font-family: "Poppins";
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  text-align: left;
+  color: #b2b2b2;
+}
+
+.form-contato textarea {
+  width: 100%;
+  height: 117px;
+  background: #fff;
+  border: 2px solid #eaeaea;
+}
+.form-contato ::placeholder {
+  font-family: "Poppins";
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  text-align: left;
+  color: #b2b2b2;
+  opacity: 0.5;
+}
+
+.form-contato__email {
+  width: 48%;
+}
+
+.form-contato__nome {
+  width: 48%;
+}
+
+.form-contato__estado {
+  width: 15%;
+}
+
+.form-contato__cidade {
+  width: 40%;
+}
+
+.form-contato__telefone {
+  width: 40%;
+}
+
+.conteudo_form1 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.form-contato__item-nome {
+  width: 100%;
+  height: 45px;
+}
+
+input.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-required.wpcf7-validates-as-email.form-contato__item-email {
+  width: 100%;
+  height: 45px;
+}
+
+input.wpcf7-form-control.wpcf7-text.wpcf7-tel.wpcf7-validates-as-required.wpcf7-validates-as-tel.form-contato__item-telefone {
+  width: 100%;
+  height: 45px;
+}
+
+input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.form-contato__item-estado {
+  width: 100%;
+  height: 45px;
+}
+
+input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.form-contato__item-cidade {
+  width: 100%;
+  height: 45px;
+}
+
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/*media 768*/
+
+@media screen and (max-width: 940px) {
+  .conteudo_form1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  .conteudo_form2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .form-contato {
+    justify-content: center;
+    width: 100%;
+  }
+
+  input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.form-contato__item-nome {
+    width: 100%;
+  }
+
+  input.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-required.wpcf7-validates-as-email.form-contato__item-email {
+    width: 100%;
+  }
+
+  input.wpcf7-form-control.wpcf7-text.wpcf7-tel.wpcf7-validates-as-required.wpcf7-validates-as-tel.form-contato__item-telefone {
+    width: 100%;
+  }
+
+  input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.form-contato__item-estado {
+    width: 100%;
+  }
+
+  input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.form-contato__item-cidade .form-contato label {
+    width: 100%;
+  }
+
+  input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.form-contato__item-cidade {
+    width: 100%;
+  }
+
+  .form-contato__autorizo label span {
+    font-size: 14px;
+  }
+
+  .form-contato__nome {
+    width: 100%;
+  }
+
+  .form-contato__email {
+    width: 100%;
+  }
+
+  section.page-contato {
+    padding: 50px 0px;
+  }
+
+  .form-contato__telefone {
+    width: 100%;
+  }
+
+  .form-contato__estado {
+    width: 100%;
+  }
+
+  .form-contato__cidade {
+    width: 100% !important;
+  }
+  span.wpcf7-list-item.first.last label {
+    line-height: 2em;
+    font-size: 0.6875em;
+  }
+}
+
+.form-contato input,
+.form-contato textarea {
+  color: $black-two;
+}
+
+form.wpcf7-form.init {
+  padding: 30px 0;
+}
+
+.form-contato input[type="submit"] {
+  color: #fff;
+}
+
+input.wpcf7-form-control.has-spinner.wpcf7-submit {
+  color: #fff;
+}
+
+textarea.wpcf7-form-control.wpcf7-textarea.wpcf7-validates-as-required {
+  box-sizing: border-box;
 }

@@ -1,3 +1,6 @@
+@import "mixins";
+@import "breakpoint";
+
 $primary-color: #c40f14;
 $secondary-color: #df191e;
 $tertiary-color: #b4b4b4;
@@ -45,7 +48,7 @@ p.footer-conteudo__span {
 
 p.footer-conteudo__span:after {
   content: "";
-  background-image: url(/imagens/Icone-map.svg);
+  background-image: url(../imagens/Icone-map.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -164,4 +167,91 @@ p.footer-conteudo__span:after {
     width: 100%;
     margin: 30px 0px;
   }
+  .footer-conteudo__texto p {
+    text-align: center;
+    display: flex;
+    justify-content: center !important;
+  }
+}
+
+.footer-conteudo__telefone {
+  display: flex;
+  align-items: center;
+}
+
+.footer-conteudo__telefone > div {
+  font-size: 0;
+  display: flex;
+  justify-content: center;
+  width: 6px;
+  height: 6px;
+  background: $black-five;
+  align-items: center;
+  border-radius: 50%;
+}
+.empresa-dizeres__caixa {
+  height: auto;
+}
+
+.empresa-dizeres {
+  display: block;
+  @include breakpoint(medium-only) {
+    display: none !important;
+  }
+}
+
+.principios-slide {
+  display: none;
+  @include breakpoint(medium-only) {
+    display: block;
+  }
+}
+
+img.principios-slide__insignias {
+  width: 231px;
+  margin: 0 auto;
+}
+
+h3.principios-slide__insignias--h3 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+p.principios-slide__insignias--p {
+  font-size: 0.875em;
+  text-align: center;
+  text-transform: initial;
+  line-height: 2em;
+}
+
+span.principios-slide__insignias--span {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+ul.slick-dots {
+  display: flex;
+  justify-content: center;
+}
+
+ul.slick-dots button {
+  border: none;
+  background: #c40f14a1;
+  font-size: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 0 15px;
+}
+
+ul.slick-dots .slick-active button {
+  border: none;
+  background: #c40f15;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 15px;
 }
